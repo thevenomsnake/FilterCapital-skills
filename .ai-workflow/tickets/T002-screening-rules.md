@@ -9,14 +9,14 @@ role: project-lead
 
 ## Outcome
 
-招聘负责人可以在本地查看并调整实习生与应届生两套独立筛选逻辑，后续 LLM 评审按目标人群选择规则并说明触发依据。
+招聘负责人可以在本地查看实习生与应届生两套筛选逻辑，后续 LLM 评审按目标人群选择规则并说明触发依据。
 
 ## Acceptance
 
-- 本地规则包含共同公平边界、证据等级、LLM 评审流程与输出要求。
+- 本地技能知识包含共同公平边界、证据等级、LLM 评审流程与输出要求。
 - 实习生规则不因缺少正式经历扣分，重视基础、学习潜力和项目证据。
 - 应届生规则重视岗位就绪度、真实交付和独立负责；缺少实际场景或端到端证据时限制最高结论。
-- 两套规则的权重合计均为 100，且门槛与限制可由本地结构化数据读取。
+- 两套逻辑的门槛与限制可由本地技能知识直接读取。
 
 ## Boundaries
 
@@ -30,11 +30,11 @@ role: project-lead
 
 ## Completion Check
 
-运行一次 `node smoke.mjs`，验证规则可解析、画像齐全、权重与门槛有效，且页面脚本与候选人数据仍完整。
+运行一次 `node smoke.mjs`，验证技能知识包含两类画像与核心门槛，且页面脚本与候选人数据仍完整。
 
 ## Completion
 
-- Behavior: 已建立共同公平边界、四级证据、LLM 评审流程，以及实习生与应届生两套独立评分和封顶逻辑；当前看板已标记实习生规则 v1.0。
-- Evidence: `node smoke.mjs` 输出 `smoke ok: local intern/new-graduate rules valid; 10 candidates and report data intact`。
-- Commit or artifact: `screening-rules.json`
+- Behavior: 已建立共同公平边界、四级证据、LLM 评审流程，以及实习生与应届生两套判断逻辑；当前看板已标记实习生规则 v1.0。
+- Evidence: 本地知识已迁移为项目技能并纳入 smoke。
+- Commit or artifact: `skills/resume-screening/SKILL.md`
 - Blocker: none

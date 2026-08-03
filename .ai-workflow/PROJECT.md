@@ -17,7 +17,7 @@ project_name: "简历评审台"
 
 ## Current State
 
-首版候选人看板与本地筛选规则 v1 已可用。`screening-rules.json` 已将实习生与应届生的评分维度、门槛和结论限制分开；当前批次标记为实习生预评审，等待完整岗位 JD 后重跑。
+首版候选人看板与本地筛选知识已可用。`skills/resume-screening/SKILL.md` 已记录实习生/应届生差异，以及实际淘汰案例确认的统计基础、方向一致性和中小公司稳定性风险；当前批次暂不重跑。
 
 ## Roles
 
@@ -27,6 +27,7 @@ project_name: "简历评审台"
 
 - [T001 生成候选人评审看板](tickets/T001-rank-resumes.md): completed, approved
 - [T002 建立分人群筛选规则](tickets/T002-screening-rules.md): completed, approved
+- [T003 沉淀实际筛选判断](tickets/T003-capture-screening-judgment.md): completed, approved
 
 ## Decisions
 
