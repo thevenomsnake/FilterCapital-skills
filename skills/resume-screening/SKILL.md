@@ -84,6 +84,17 @@ Allow the following evidence to overturn the risk:
 - a specific and credible cross-major transition narrative;
 - concrete understanding of the target role and of working in a small company, with a credible long-term reason for choosing both.
 
+### Two-Branch Risk
+
+Do not force a factual conclusion when an unusual resume pattern has two plausible explanations and both are unacceptable for the role. Evaluate the branches separately:
+
+- **Capability branch:** If the achievements are genuine, the candidate's ability and external options may be far above what the small company can retain, creating high stability risk.
+- **Access branch:** If the opportunities came mainly from personal connections, the institution names and department outcomes do not prove the candidate's ability, creating authenticity, self-reliance, and execution risk.
+
+Use this rule only when several concrete clues coexist, such as a graduation-to-study gap, geographically clustered short placements that are difficult to access casually, unclear employment status, and achievements exceeding the likely authority of a short-term junior role. Do not trigger it from a prestigious school or institution name alone.
+
+When both branches independently lead to an unacceptable hiring risk, decline without claiming which branch is true. Explain the decision as unresolved two-sided risk, not as an accusation about the candidate's background.
+
 ## Evolve The Knowledge
 
 Discuss one candidate at a time. Treat an initial explanation as a hypothesis. Add or change a rule only after the recruiter confirms the underlying judgment. Store reusable logic, not candidate names, contact details, or raw resume text.
