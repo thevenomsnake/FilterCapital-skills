@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>简历评审台</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f3f5f2;
+      --surface: #ffffff;
+      --ink: #17211b;
+      --muted: #657067;
+      --line: #d9ded8;
+      --green: #166b47;
+      --green-soft: #e7f2ec;
+      --amber: #9a5c00;
+      --amber-soft: #fff3dc;
+      --red: #9b3b3b;
+      --red-soft: #f9eaea;
+      --blue: #315f82;
+      --blue-soft: #e9f1f7;
+      --shadow: 0 12px 34px rgba(22, 36, 28, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", "Microsoft YaHei", sans-serif;
+      letter-spacing: 0;
+    }
+
+    button, input, select { font: inherit; letter-spacing: 0; }
+
+    .topbar {
+      min-height: 76px;
+      padding: 16px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      background: #17211b;
+      color: #fff;
+      border-bottom: 3px solid #d8b45d;
+    }
+
+    .brand h1 { margin: 0; font-size: 22px; line-height: 1.2; }
+    .brand p { margin: 5px 0 0; color: #bdc8c0; font-size: 13px; }
+
+    .run-state { text-align: right; font-size: 13px; color: #dfe6e1; }
+    .run-state strong { display: block; margin-bottom: 4px; color: #fff; font-size: 15px; }
+
+    main { width: min(1480px, 100%); margin: 0 auto; padding: 22px 28px 32px; }
+
+    .context-bar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 16px;
+      padding: 13px 16px;
+      background: var(--blue-soft);
+      border-left: 4px solid var(--blue);
+      color: #274b66;
+      font-size: 13px;
+    }
+
+    .rubric { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
+    .rubric span { padding: 4px 8px; background: #fff; border: 1px solid #c9d9e4; border-radius: 4px; white-space: nowrap; }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto auto;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .search, select {
+      height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: var(--surface);
+      color: var(--ink);
+    }
+
+    .search { width: 100%; padding: 0 12px; }
+    .search:focus, select:focus, button:focus-visible { outline: 3px solid rgba(49, 95, 130, 0.2); outline-offset: 1px; }
+    select { padding: 0 34px 0 11px; }
+
+    .segments { display: flex; min-width: 0; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; background: var(--surface); }
+    .segments button {
+      min-height: 38px;
+      padding: 0 11px;
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .segments button:last-child { border-right: 0; }
+    .segments button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(500px, 0.94fr) minmax(480px, 1.06fr);
+      min-height: 650px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .candidate-pane { min-width: 0; border-right: 1px solid var(--line); }
+    .table-head, .candidate-row {
+      display: grid;
+      grid-template-columns: minmax(140px, 1.2fr) minmax(110px, 1fr) 80px 104px;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .table-head {
+      height: 44px;
+      padding: 0 16px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      background: #f7f8f6;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .candidate-list { max-height: 690px; overflow: auto; }
+    .candidate-row {
+      width: 100%;
+      min-height: 68px;
+      padding: 10px 16px;
+      border: 0;
+      border-bottom: 1px solid #eaede9;
+      background: #fff;
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+    }
+    .candidate-row:hover { background: #f8faf8; }
+    .candidate-row[aria-current="true"] { background: #edf5f0; box-shadow: inset 4px 0 var(--green); }
+    .candidate-name { min-width: 0; }
+    .candidate-name strong { display: block; margin-bottom: 4px; font-size: 15px; }
+    .candidate-name small, .school { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+    .score { font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: max-content;
+      max-width: 100%;
+      min-height: 25px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: normal;
+      text-align: center;
+    }
+    .recommend { color: var(--green); background: var(--green-soft); }
+    .review { color: var(--amber); background: var(--amber-soft); }
+    .decline { color: var(--red); background: var(--red-soft); }
+
+    .empty { padding: 48px 20px; color: var(--muted); text-align: center; }
+
+    .detail-pane { min-width: 0; padding: 26px 28px; overflow: auto; }
+    .detail-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px; align-items: start; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+    .detail-title { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .detail-title h2 { margin: 0; font-size: 27px; line-height: 1.2; }
+    .detail-meta { margin: 7px 0 0; color: var(--muted); font-size: 13px; }
+    .total-score { min-width: 82px; text-align: right; }
+    .total-score strong { display: block; font-size: 42px; line-height: 1; font-variant-numeric: tabular-nums; }
+    .total-score span { color: var(--muted); font-size: 12px; }
+
+    .summary { margin: 20px 0; font-size: 15px; line-height: 1.75; }
+
+    .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 0 22px; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; }
+    .metric { min-width: 0; padding: 12px; border-right: 1px solid var(--line); background: #fafbf9; }
+    .metric:last-child { border-right: 0; }
+    .metric strong { display: block; margin-top: 4px; font-size: 20px; }
+    .metric span { color: var(--muted); font-size: 11px; }
+
+    .evidence-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .detail-section h3 { margin: 0 0 10px; font-size: 14px; }
+    .detail-section ul { margin: 0; padding-left: 19px; }
+    .detail-section li { margin-bottom: 9px; color: #39453d; font-size: 13px; line-height: 1.55; }
+
+    .interview {
+      margin-top: 22px;
+      padding: 15px 16px;
+      border-left: 4px solid #d8b45d;
+      background: #fff9e9;
+    }
+    .interview h3 { margin: 0 0 7px; font-size: 13px; color: #765000; }
+    .interview p { margin: 0; font-size: 14px; line-height: 1.6; }
+
+    .footer-note { margin: 16px 0 0; color: var(--muted); font-size: 12px; text-align: right; }
+
+    @media (max-width: 1050px) {
+      .toolbar { grid-template-columns: 1fr auto; }
+      .segments { grid-column: 1 / -1; order: 3; width: max-content; max-width: 100%; overflow-x: auto; }
+      .workspace { grid-template-columns: 1fr; }
+      .candidate-pane { border-right: 0; border-bottom: 1px solid var(--line); }
+      .candidate-list { max-height: 410px; }
+    }
+
+    @media (max-width: 680px) {
+      .topbar { padding: 15px 16px; align-items: flex-start; }
+      .run-state { display: none; }
+      main { padding: 14px 12px 24px; }
+      .context-bar { grid-template-columns: 1fr; }
+      .rubric { justify-content: flex-start; }
+      .toolbar { grid-template-columns: 1fr; }
+      select { width: 100%; }
+      .segments { width: 100%; }
+      .segments button { flex: 1; padding: 0 8px; }
+      .table-head, .candidate-row { grid-template-columns: minmax(120px, 1.2fr) minmax(90px, 1fr) 58px; }
+      .table-head span:nth-child(2), .candidate-row .school { display: none; }
+      .detail-pane { padding: 22px 18px; }
+      .metrics { grid-template-columns: 1fr 1fr; }
+      .metric:nth-child(2) { border-right: 0; }
+      .metric:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .evidence-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>简历评审台</h1>
+      <p>数据分析实习生 · J11223 · iTalent 批次</p>
+    </div>
+    <div class="run-state">
+      <strong>10 / 10 已完成</strong>
+      只读评审 · 2026-08-03
+    </div>
+  </header>
+
+  <main>
+    <section class="context-bar" aria-label="本轮评审口径">
+      <div><strong>当前口径：</strong>依据职位名称推断的首轮预评审。补充完整 JD 后应重新校准；性别、年龄、籍贯与联系方式未参与判断。</div>
+      <div class="rubric" aria-label="评分维度">
+        <span>岗位相关 30</span><span>业务证据 30</span><span>数据深度 25</span><span>表达协作 15</span>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="候选人筛选">
+      <input id="search" class="search" type="search" placeholder="搜索候选人或学校" aria-label="搜索候选人或学校">
+      <div class="segments" role="group" aria-label="建议结论">
+        <button type="button" data-filter="all" aria-pressed="true">全部 10</button>
+        <button type="button" data-filter="recommend" aria-pressed="false">优先面试 3</button>
+        <button type="button" data-filter="review" aria-pressed="false">建议复核 5</button>
+        <button type="button" data-filter="decline" aria-pressed="false">暂不优先 2</button>
+      </div>
+      <select id="sort" aria-label="排序方式">
+        <option value="score-desc">评分从高到低</option>
+        <option value="score-asc">评分从低到高</option>
+        <option value="name">姓名</option>
+      </select>
+    </section>
+
+    <section class="workspace">
+      <div class="candidate-pane">
+        <div class="table-head" aria-hidden="true">
+          <span>候选人</span><span>学校</span><span>评分</span><span>LLM 建议</span>
+        </div>
+        <div id="candidate-list" class="candidate-list" aria-label="候选人列表"></div>
+      </div>
+      <aside id="detail" class="detail-pane" aria-live="polite"></aside>
+    </section>
+
+    <p class="footer-note">LLM 结论仅作为初筛辅助，最终决定需由招聘负责人结合岗位 JD 与面试证据作出。</p>
+  </main>
+
+  <script>
+    const candidates = [
+      {
+        name: "李世龙", school: "山东理工大学", sourceStatus: "未筛选", score: 94, result: "recommend", confidence: "高",
+        dimensions: { relevance: 28, evidence: 29, depth: 24, communication: 13 },
+        summary: "当前批次中岗位证据最完整。既有真实业务的数据分析与自动化提效，也能把 LLM、SQL、Python 和模型评估串成可交付结果，适合优先进入面试验证所有权与复现能力。",
+        strengths: ["携程项目处理 120 万搜索词，给出 94% 正确率与上线后 UV 提升 35% 的完整结果链。", "美菜网用 SQL 与 Agent 将数据更新从 45 分钟降至 5 分钟，并提供转化率、收益与时间成本指标。", "具备 Python、机器学习、Excel 与业务问题拆解的组合能力，经历与数据分析岗位直接相关。"],
+        risks: ["简历成果密度很高，需要核实个人贡献边界及指标口径。", "SQL 复杂度与生产数据质量处理需在面试中现场验证。"],
+        interview: "任选美菜网机会品项目，现场画出数据表、漏斗口径和收益计算；再说明如何排除同期活动对 10.6% 转化提升的影响。"
+      },
+      {
+        name: "李洁", school: "西南财经大学", sourceStatus: "未筛选", score: 91, result: "recommend", confidence: "高",
+        dimensions: { relevance: 28, evidence: 28, depth: 22, communication: 13 },
+        summary: "业务分析、数据治理和建模三类证据均衡，且多数经历提供了可核验的业务结果。SQL、Power BI、Python 与因果推断覆盖了实习岗位常见任务。",
+        strengths: ["在医药业务中整合采购、库存、应收与销售数据，搭建经营看板并参与异常归因。", "员工离职模型使用 XGBoost 与 SHAP，能将模型结果转化为干预人群与管理动作。", "内容运营经历提供明确的播放量结果，体现从分析到策略执行的闭环。"],
+        risks: ["不同经历跨度较大，需要确认各项目数据规模与独立完成程度。", "需验证因果推断并非只停留在课程或研究表述。"],
+        interview: "讲一次经营看板发现异常并推动业务动作的全过程：指标口径、下钻路径、根因证据和最终效果分别是什么？"
+      },
+      {
+        name: "黄国伟", school: "华东交通大学", sourceStatus: "未筛选", score: 87, result: "recommend", confidence: "高",
+        dimensions: { relevance: 27, evidence: 25, depth: 23, communication: 12 },
+        summary: "数据开发与 SQL 能力是明显强项，具备真实离线数仓工作经验，可快速承接取数、指标建设和数据质量任务。业务洞察表达略弱于前两名，但值得优先面试。",
+        strengths: ["实习直接覆盖 ODS、DWD、DWS、ADS 分层数据、核心指标取数与 T+1 质量保障。", "能够描述 GMV、留存、复购率等指标的建模与调度链路。", "Hive、Spark、SQL、ETL 与数据倾斜处理适合数据量较大的分析环境。"],
+        risks: ["简历技术栈很宽，需确认实际熟练程度而非组件罗列。", "业务解释、可视化表达和从指标到决策的案例相对不足。"],
+        interview: "给出 GMV 突降场景，请现场说明从 ADS 到 ODS 的排查顺序、核对 SQL 和如何判断是数据故障还是业务变化。"
+      },
+      {
+        name: "沈楷琳", school: "香港城市大学", sourceStatus: "未筛选", score: 83, result: "review", confidence: "中高",
+        dimensions: { relevance: 26, evidence: 23, depth: 20, communication: 14 },
+        summary: "有产品策略运营实习和较完整的商业分析项目，工具组合符合岗位需求。真实业务经历偏运营分析，最强项目来自模拟数据，建议复核 SQL 与独立分析深度。",
+        strengths: ["使用 NPS、销售、完播率和库存数据支持产品及运营复盘。", "零售项目处理 26 万交易、7 万客户，覆盖清洗、分群、偏好分析与业务建议。", "Python、MySQL、Tableau 和用户研究能力组合较均衡。"],
+        risks: ["两项核心分析项目属于模拟或公开数据，落地效果不可直接验证。", "SQL 仅写到基础查询能力，复杂取数与口径治理证据不足。"],
+        interview: "从 Quantium 项目挑一个建议，说明它如何转成可执行动作，并设计一个验证建议是否有效的实验或指标。"
+      },
+      {
+        name: "林展庆", school: "浙江大学", sourceStatus: "淘汰", score: 79, result: "review", confidence: "中",
+        dimensions: { relevance: 24, evidence: 23, depth: 18, communication: 14 },
+        summary: "产品运营和数据分析场景较丰富，能把用户反馈、搜索行为、内容数据与产品改进连接起来。硬核 SQL 与定量建模证据不足，因此 LLM 建议复核，与系统当前淘汰状态存在分歧。",
+        strengths: ["有知识产权平台的数据分析实习，覆盖行为分析、检索优化、内容指标与看板。", "机器视觉经历体现问题归因、跨团队推动和验证闭环。", "多语言与现场协作经历可能适合业务沟通较多的分析岗位。"],
+        risks: ["多数成果缺少基线、样本量和提升幅度，难判断实际影响。", "SQL、统计检验与模型能力描述偏浅，需要现场核实。"],
+        interview: "选择智能检索优化案例，定义成功指标和离线/在线评估方案，并解释如何证明优化来自检索逻辑而不是流量变化。"
+      },
+      {
+        name: "窦浩宇", school: "华中师范大学", sourceStatus: "未筛选", score: 78, result: "review", confidence: "中高",
+        dimensions: { relevance: 25, evidence: 22, depth: 19, communication: 12 },
+        summary: "个人项目呈现了从采集、建模、SQL 指标到 BI 看板和质量测试的完整链路，岗位基础扎实。缺少真实企业数据分析实习，是当前主要不确定性。",
+        strengths: ["Steam 项目具备可持续更新的数据管道、6 个分析视图、5 个主题看板与异常监控。", "重视指标口径、明细下钻、数据一致性和自动化测试。", "SQL、Excel、Python 与 Tableau 均有具体使用场景。"],
+        risks: ["核心证据主要来自个人或公开数据项目。", "对业务方需求变化、模糊口径和跨团队推进的实战证据有限。"],
+        interview: "展示 Steam 项目中一个异常案例：触发规则是什么、如何下钻、最终如何区分舆情变化与采集任务失败？"
+      },
+      {
+        name: "屈刘阳", school: "东北师范大学", sourceStatus: "未筛选", score: 77, result: "review", confidence: "中",
+        dimensions: { relevance: 24, evidence: 21, depth: 21, communication: 11 },
+        summary: "统计和因果推断基础突出，能从数据得出精细化运营结论。现有证据偏竞赛与研究，尚未证明在真实组织中持续交付分析结果的能力。",
+        strengths: ["将 STL、DML 与因果森林用于优惠增量归因，给出自然消费与优惠净增量的量化拆分。", "有 13201 名用户、53958 条订单的分层数据构建经历。", "Python、R、MySQL 和统计建模基础与岗位匹配。"],
+        risks: ["没有直接数据分析实习经历。", "需验证因果识别假设、处理组定义和结果稳健性，而非只会调用模型。"],
+        interview: "解释优惠增量项目的处理组、结果变量、混杂因素和识别假设；若发薪日同时改变曝光，如何做稳健性检验？"
+      },
+      {
+        name: "王本豪", school: "香港大学", sourceStatus: "淘汰", score: 76, result: "review", confidence: "中",
+        dimensions: { relevance: 23, evidence: 22, depth: 20, communication: 11 },
+        summary: "统计建模与银行、保险场景相关度较高，简历给出了多项业务提升指标。但短期实习内成果较多且描述宏大，建议以案例复盘验证真实性；LLM 结论与系统当前淘汰状态不同。",
+        strengths: ["银行经历覆盖贷款分类、ECL 预测与风险报表，业务场景具体。", "具备回归、时间序列、聚类与风险模型基础。", "多项成果尝试量化产能、准确率、时效与响应率。"],
+        risks: ["短周期内实现多项显著业务提升，需要核验归因和个人贡献。", "SQL、数据管道和 BI 工具的实际使用证据不够清楚。"],
+        interview: "复盘 ECL 日度预测：训练标签、时间切分、基线模型、误差指标和上线后的监控分别如何设计？"
+      },
+      {
+        name: "欧阳豪", school: "上海财经大学", sourceStatus: "未筛选", score: 72, result: "decline", confidence: "中高",
+        dimensions: { relevance: 23, evidence: 17, depth: 20, communication: 12 },
+        summary: "数学基础与 Python、SQL、机器学习技能符合入门要求，但目前只有公开数据项目，缺少真实业务约束、实习交付和可核验效果。当前批次竞争下暂不优先。",
+        strengths: ["覆盖 RFM、K-Means、CLV、流失预测、时间序列和退货率等常见分析主题。", "SQL 多表分析、窗口函数、Pandas 与可视化工具组合完整。", "数学与应用数学背景有利于后续建模学习。"],
+        risks: ["项目均为公开数据或练习性质，没有真实业务方与上线结果。", "缺少样本量、评估指标、基线和结论验证细节。"],
+        interview: "若需补录，要求其选一个项目提交 SQL/Python 代码，并现场解释模型指标、数据泄漏检查和业务建议的依据。"
+      },
+      {
+        name: "林章廷", school: "华中师范大学", sourceStatus: "未筛选", score: 68, result: "decline", confidence: "中高",
+        dimensions: { relevance: 20, evidence: 18, depth: 16, communication: 14 },
+        summary: "运营指标意识和沟通能力可见，但简历目标明显偏游戏数值策划，数据分析工具与项目深度弱于本批其他候选人，暂不优先进入数据分析岗位面试。",
+        strengths: ["新媒体运营经历能使用阅读、增长、停留和转化数据调整策略。", "问卷与用户画像项目体现基本的调研、统计和分群意识。", "团队负责人经历与表达能力对跨部门协作有帮助。"],
+        risks: ["职业目标与当前数据分析岗位不够一致。", "SQL 为基础水平，缺少真实数据分析交付、质量治理或严谨模型评估。"],
+        interview: "若业务更偏游戏分析可转岗复核；要求其现场拆解一个游戏留存问题，并写出需要的数据表、核心指标与验证方法。"
+      }
+    ];
+
+    const labels = { recommend: "优先面试", review: "建议复核", decline: "暂不优先" };
+    let activeFilter = "all";
+    let selectedName = candidates[0].name;
+
+    const listEl = document.getElementById("candidate-list");
+    const detailEl = document.getElementById("detail");
+    const searchEl = document.getElementById("search");
+    const sortEl = document.getElementById("sort");
+
+    function visibleCandidates() {
+      const query = searchEl.value.trim().toLowerCase();
+      const filtered = candidates.filter(candidate =>
+        (activeFilter === "all" || candidate.result === activeFilter) &&
+        (!query || `${candidate.name} ${candidate.school}`.toLowerCase().includes(query))
+      );
+      return filtered.sort((a, b) => {
+        if (sortEl.value === "score-asc") return a.score - b.score;
+        if (sortEl.value === "name") return a.name.localeCompare(b.name, "zh-CN");
+        return b.score - a.score;
+      });
+    }
+
+    function renderList() {
+      const visible = visibleCandidates();
+      if (!visible.some(candidate => candidate.name === selectedName)) selectedName = visible[0]?.name || "";
+      listEl.innerHTML = visible.length ? visible.map(candidate => `
+        <button class="candidate-row" type="button" data-name="${candidate.name}" aria-current="${candidate.name === selectedName}">
+          <span class="candidate-name"><strong>${candidate.name}</strong><small>iTalent：${candidate.sourceStatus}</small></span>
+          <span class="school">${candidate.school}</span>
+          <span class="score">${candidate.score}</span>
+          <span class="pill ${candidate.result}">${labels[candidate.result]}</span>
+        </button>
+      `).join("") : '<div class="empty">没有符合当前条件的候选人</div>';
+
+      listEl.querySelectorAll("button").forEach(button => {
+        button.addEventListener("click", () => {
+          selectedName = button.dataset.name;
+          renderList();
+          renderDetail();
+        });
+      });
+      renderDetail();
+    }
+
+    function renderDetail() {
+      const candidate = candidates.find(item => item.name === selectedName);
+      if (!candidate) {
+        detailEl.innerHTML = '<div class="empty">请选择候选人</div>';
+        return;
+      }
+      const d = candidate.dimensions;
+      detailEl.innerHTML = `
+        <div class="detail-head">
+          <div>
+            <div class="detail-title"><h2>${candidate.name}</h2><span class="pill ${candidate.result}">${labels[candidate.result]}</span></div>
+            <p class="detail-meta">${candidate.school} · iTalent 当前状态：${candidate.sourceStatus} · 评审置信度：${candidate.confidence}</p>
+          </div>
+          <div class="total-score"><strong>${candidate.score}</strong><span>岗位匹配分 / 100</span></div>
+        </div>
+        <p class="summary">${candidate.summary}</p>
+        <div class="metrics" aria-label="分项评分">
+          <div class="metric"><span>岗位相关</span><strong>${d.relevance}<small> / 30</small></strong></div>
+          <div class="metric"><span>业务证据</span><strong>${d.evidence}<small> / 30</small></strong></div>
+          <div class="metric"><span>数据深度</span><strong>${d.depth}<small> / 25</small></strong></div>
+          <div class="metric"><span>表达协作</span><strong>${d.communication}<small> / 15</small></strong></div>
+        </div>
+        <div class="evidence-grid">
+          <section class="detail-section"><h3>支持证据</h3><ul>${candidate.strengths.map(item => `<li>${item}</li>`).join("")}</ul></section>
+          <section class="detail-section"><h3>待验证风险</h3><ul>${candidate.risks.map(item => `<li>${item}</li>`).join("")}</ul></section>
+        </div>
+        <section class="interview"><h3>建议追问</h3><p>${candidate.interview}</p></section>
+      `;
+    }
+
+    document.querySelectorAll("[data-filter]").forEach(button => {
+      button.addEventListener("click", () => {
+        activeFilter = button.dataset.filter;
+        document.querySelectorAll("[data-filter]").forEach(item => item.setAttribute("aria-pressed", String(item === button)));
+        renderList();
+      });
+    });
+    searchEl.addEventListener("input", renderList);
+    sortEl.addEventListener("change", renderList);
+    renderList();
+  </script>
+</body>
+</html>
