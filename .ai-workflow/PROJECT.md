@@ -17,7 +17,7 @@ project_name: "简历评审台"
 
 ## Current State
 
-纯 Codex 简历侦探技能已可用。调用 `$investigate-resumes` 后，可从招聘 URL 通过外部 Chrome 只读采集，重建事实、发现异常、比较解释并形成中小公司筛选结论；项目不包含 GUI。
+纯 Codex 简历侦探技能已模块化。薄路由依次调用事实与联网调查、核心能力、方向路径、独立挖掘加分、中小公司风险和最终决策；调查模块不打分、不下结论，项目不包含 GUI。
 
 ## Roles
 
@@ -29,6 +29,7 @@ project_name: "简历评审台"
 - [T002 建立分人群筛选规则](tickets/T002-screening-rules.md): completed, approved
 - [T003 沉淀实际筛选判断](tickets/T003-capture-screening-judgment.md): completed, approved
 - [T004 重构简历侦探流程](tickets/T004-investigate-resumes.md): completed, approved
+- [T005 拆分调查评分模块](tickets/T005-modularize-investigation.md): completed, approved
 
 ## Decisions
 
