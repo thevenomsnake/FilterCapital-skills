@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0",
+  "locale": "zh-CN",
+  "decision_labels": {
+    "priority": "优先面试",
+    "review": "建议复核",
+    "decline": "暂不优先",
+    "needs_data": "信息不足"
+  },
+  "audience_selection": [
+    {
+      "profile": "intern",
+      "when": "岗位或招聘批次明确为实习生"
+    },
+    {
+      "profile": "new_graduate",
+      "when": "岗位或招聘批次明确为应届生、校招生或毕业生项目"
+    },
+    {
+      "profile": "human_confirmation",
+      "when": "目标人群不明确；确认前不得输出最终结论"
+    }
+  ],
+  "common": {
+    "purpose": "辅助招聘负责人形成一致、可追溯的初筛意见，不替代人工录用决定。",
+    "excluded_from_scoring": [
+      "姓名",
+      "性别",
+      "年龄与出生日期",
+      "籍贯与住址",
+      "民族与政治面貌",
+      "婚育状况",
+      "照片",
+      "电话与邮箱",
+      "与岗位无关的健康信息",
+      "院校名气与雇主名气本身"
+    ],
+    "evidence_rules": [
+      "只评价简历中明确出现且与岗位相关的事实，不补全或猜测缺失信息。",
+      "技能关键词本身不是能力证据，必须结合任务、方法、产出或结果判断。",
+      "同一成果不得在多个维度重复计满分。",
+      "量化结果需同时检查基线、口径、个人贡献和可验证性。",
+      "时间线、职责或结果相互矛盾时标记人工复核，不自行判定造假。"
+    ],
+    "evidence_levels": [
+      {
+        "level": 0,
+        "label": "仅自述",
+        "definition": "只有技能词、自我评价或课程名，没有使用场景。"
+      },
+      {
+        "level": 1,
+        "label": "基础接触",
+        "definition": "说明学习或参与过，但缺少本人任务、方法和产出。"
+      },
+      {
+        "level": 2,
+        "label": "具体实践",
+        "definition": "有明确问题、本人动作、方法或可检查产物。"
+      },
+      {
+        "level": 3,
+        "label": "结果闭环",
+        "definition": "在具体场景中说明本人贡献、结果指标、验证方法或后续影响。"
+      }
+    ],
+    "evaluation_flow": [
+      "从完整岗位 JD 提取必须条件、加分条件和可培养条件；只有职位名称时标记为预评审。",
+      "确定招聘人群并选择对应 profile。",
+      "抽取岗位相关证据，移除禁止参与评分的属性。",
+      "为每条证据标注等级、场景类型、本人贡献与可信度。",
+      "独立计算各维度分数，再应用优先条件、封顶条件和人工复核触发器。",
+      "输出结论、证据、风险、规则命中项和可验证的面试追问。"
+    ],
+    "human_review_triggers": [
+      "只有职位名称，没有完整岗位 JD",
+      "目标人群不明确",
+      "关键经历时间线或职责相互矛盾",
+      "高影响结果缺少基线、口径或个人贡献",
+      "简历正文缺失、无法读取或信息明显不完整"
+    ]
+  },
+  "profiles": {
+    "intern": {
+      "label": "实习生",
+      "principle": "判断是否值得培养和进入真实工作场景，不以已有正式工作经验作为前提。",
+      "dimensions": [
+        {
+          "key": "potential",
+          "label": "基础与学习潜力",
+          "weight": 30,
+          "evaluate": ["岗位基础知识", "学习速度与迁移能力", "问题拆解", "对反馈的迭代"]
+        },
+        {
+          "key": "practice_evidence",
+          "label": "实践证据",
+          "weight": 30,
+          "evaluate": ["课程项目、个人项目、竞赛、社团或实习中的具体动作", "本人贡献", "产物与结果"]
+        },
+        {
+          "key": "role_fit",
+          "label": "岗位相关",
+          "weight": 25,
+          "evaluate": ["与 JD 核心任务的重合度", "必须技能的当前基础", "动机与方向一致性"]
+        },
+        {
+          "key": "communication",
+          "label": "表达协作",
+          "weight": 15,
+          "evaluate": ["结构化表达", "协作经历", "说明取舍和复盘的能力"]
+        }
+      ],
+      "thresholds": {
+        "priority_min": 82,
+        "review_min": 68
+      },
+      "priority_requirements": [
+        { "field": "dimension_scores.practice_evidence", "operator": ">=", "value": 20 },
+        { "field": "evidence.max_level", "operator": ">=", "value": 2 }
+      ],
+      "caps": [
+        {
+          "code": "claims_only",
+          "when": { "field": "evidence.max_level", "operator": "<=", "value": 1 },
+          "max_decision": "review",
+          "reason": "只有技能自述或基础接触，尚无具体实践证据。"
+        },
+        {
+          "code": "critical_must_have_missing",
+          "when": { "field": "jd.non_trainable_must_have_missing_count", "operator": ">", "value": 0 },
+          "max_decision": "decline",
+          "reason": "缺少岗位明确标记为不可培养的必要条件。"
+        }
+      ],
+      "do_not_penalize": [
+        "没有正式工作经验",
+        "没有生产环境经历",
+        "项目来自课程、个人学习、竞赛或社团",
+        "未就读名校或未进入知名企业"
+      ]
+    },
+    "new_graduate": {
+      "label": "应届生",
+      "principle": "判断能否在合理带教下稳定承担岗位职责，强调真实场景交付和独立负责。",
+      "dimensions": [
+        {
+          "key": "job_readiness",
+          "label": "岗位就绪度",
+          "weight": 30,
+          "evaluate": ["必须技能掌握", "对核心工作流程的理解", "进入岗位后的可用程度"]
+        },
+        {
+          "key": "delivery_evidence",
+          "label": "真实交付",
+          "weight": 30,
+          "evaluate": ["实习、真实客户、开源协作或被他人使用的项目", "端到端负责", "质量与结果"]
+        },
+        {
+          "key": "technical_depth",
+          "label": "专业深度",
+          "weight": 25,
+          "evaluate": ["复杂问题处理", "方法选择与取舍", "数据质量、验证和复盘"]
+        },
+        {
+          "key": "communication",
+          "label": "表达协作",
+          "weight": 15,
+          "evaluate": ["需求澄清", "跨角色协作", "风险沟通与结果表达"]
+        }
+      ],
+      "thresholds": {
+        "priority_min": 85,
+        "review_min": 72
+      },
+      "priority_requirements": [
+        { "field": "dimension_scores.delivery_evidence", "operator": ">=", "value": 22 },
+        { "field": "evidence.real_context_count", "operator": ">=", "value": 1 },
+        { "field": "evidence.end_to_end_count", "operator": ">=", "value": 1 }
+      ],
+      "caps": [
+        {
+          "code": "no_real_context",
+          "when": { "field": "evidence.real_context_count", "operator": "==", "value": 0 },
+          "max_decision": "review",
+          "reason": "尚无真实组织、客户、用户或协作场景中的交付证据。"
+        },
+        {
+          "code": "no_end_to_end_delivery",
+          "when": { "field": "evidence.end_to_end_count", "operator": "==", "value": 0 },
+          "max_decision": "review",
+          "reason": "尚未展示从问题到交付或验证的完整负责经历。"
+        },
+        {
+          "code": "must_have_missing",
+          "when": { "field": "jd.must_have_missing_count", "operator": ">", "value": 0 },
+          "max_decision": "decline",
+          "reason": "缺少岗位明确要求的必要条件。"
+        },
+        {
+          "code": "claims_only",
+          "when": { "field": "evidence.max_level", "operator": "<=", "value": 1 },
+          "max_decision": "decline",
+          "reason": "应届生需要至少一项可检查的具体实践或交付。"
+        }
+      ],
+      "do_not_penalize": [
+        "没有全职工作经验",
+        "雇主或院校名气不高",
+        "真实交付来自开源、客户项目、校园组织或小型团队"
+      ]
+    }
+  },
+  "output_contract": {
+    "required": [
+      "rule_version",
+      "profile",
+      "provisional",
+      "score",
+      "decision",
+      "dimension_scores",
+      "evidence",
+      "risks",
+      "rule_hits",
+      "human_review_required",
+      "interview_questions"
+    ],
+    "decision_order": ["decline", "review", "priority"],
+    "apply_caps_after_scoring": true
+  }
+}

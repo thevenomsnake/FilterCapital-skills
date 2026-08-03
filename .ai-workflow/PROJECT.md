@@ -17,7 +17,7 @@ project_name: "简历评审台"
 
 ## Current State
 
-首版 `index.html` 已可用：当前数据分析实习生批次的 10 名候选人已完成排序、结论分类与证据化评审。下一步产品决策是是否提供完整岗位 JD 重新校准评分，再决定是否开放 iTalent 写回。
+首版候选人看板与本地筛选规则 v1 已可用。`screening-rules.json` 已将实习生与应届生的评分维度、门槛和结论限制分开；当前批次标记为实习生预评审，等待完整岗位 JD 后重跑。
 
 ## Roles
 
@@ -26,6 +26,7 @@ project_name: "简历评审台"
 ## Active Tickets
 
 - [T001 生成候选人评审看板](tickets/T001-rank-resumes.md): completed, approved
+- [T002 建立分人群筛选规则](tickets/T002-screening-rules.md): completed, approved
 
 ## Decisions
 
