@@ -1,6 +1,6 @@
 ---
 name: investigate-resumes
-description: Investigate resumes from authenticated recruitment URLs or supplied text, reconstruct candidate stories, score ordered evidence modules, test competing explanations, and make small-company hiring decisions for interns and new graduates. Use when screening or comparing resumes in Codex, explaining outcomes, probing credibility or stability, or learning new judgment patterns from recruiter feedback.
+description: Apply recruiter eligibility gates and investigate resumes from authenticated recruitment URLs or supplied text, reconstruct candidate stories, score ordered evidence modules, test competing explanations, and make small-company hiring decisions for interns and new graduates. Use when screening or comparing resumes in Codex, explaining outcomes, probing credibility or stability, or learning new judgment patterns from recruiter feedback.
 ---
 
 # Investigate Resumes
@@ -20,6 +20,7 @@ Run the investigation in Codex. Treat the resume as an evidence trace, not a lis
 
 Read each referenced file completely before applying it. Carry its output into the next module.
 
+0. [Apply eligibility gates](references/00-eligibility.md): run confirmed low-cost hard gates first. Stop immediately on a confirmed failure.
 1. [Investigate facts](references/01-investigate.md): reconstruct the timeline, mine public context, test anomalies, and produce competing stories with sourced counterevidence. Do not score or recommend.
 2. [Score capability](references/02-capability.md): evaluate evidence depth, audience expectations, statistical foundation, and role capability on `0-5`.
 3. [Score trajectory](references/03-trajectory.md): evaluate direction convergence and transition credibility on `0-5`.
@@ -30,6 +31,7 @@ Read each referenced file completely before applying it. Carry its output into t
 ## Scoring Contract
 
 - Keep the module vector as `capability / trajectory / inquiry bonus / small-company fit`.
+- Keep eligibility gates separate from capability evidence and module scores.
 - Do not collapse it into a weighted total until recruiter-labeled examples calibrate useful weights and thresholds.
 - Let confirmed hard gates and convergent risk branches override module scores only where the references explicitly say so.
 - Keep observations, inferences, and decisions visibly separate.
