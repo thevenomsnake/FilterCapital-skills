@@ -1,4 +1,0 @@
-interface:
-  display_name: "简历筛选判断"
-  short_description: "按本地用人判断标准评估实习生与应届生候选人的简历与稳定性"
-  default_prompt: "使用 $resume-screening 评估候选人并解释命中的判断标准。"

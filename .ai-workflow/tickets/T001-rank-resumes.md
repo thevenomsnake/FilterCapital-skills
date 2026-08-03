@@ -35,5 +35,5 @@ role: project-lead
 
 - Behavior: 已生成 10 名候选人的排序、筛选、分项评分、证据、风险和面试追问。
 - Evidence: `node smoke.mjs` 输出 `smoke ok: 10 candidates, 3/5/2 decisions, scores and detail fields valid`。
-- Commit or artifact: `index.html`
+- Commit or artifact: 已退役的首版 `index.html`；产品现已迁移为纯 Codex 技能。
 - Blocker: none

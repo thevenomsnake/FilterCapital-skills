@@ -11,13 +11,13 @@ project_name: "简历评审台"
 
 - Intended user: 需要批量初筛候选人的招聘负责人。
 - Problem: 登录招聘系统后仍需逐份阅读、比较和记录简历，判断口径不统一。
-- First value: 从一个已登录的 iTalent 批次链接读取简历，按同一岗位口径生成可比较的候选人排序与证据摘要。
-- Delivery: Codex 通过外部 Chrome 登录态只读采集，在项目内生成可直接打开的本地 HTML 报告。
+- First value: 调用本地技能，从一个已登录的 iTalent 批次链接读取简历，在 Codex 中生成候选人调查、比较与筛选结论。
+- Delivery: 纯 Codex 技能；通过外部 Chrome 登录态只读采集，所有交互与结果留在 Codex 对话中。
 - Boundaries: 不保存原始简历、电话或邮箱；不依据性别、年龄、籍贯等受保护或无关信息评分；不自动回写招聘系统；不产生额外 API 费用；当前评分依据职位名称推断，待岗位 JD 校准。
 
 ## Current State
 
-首版候选人看板与本地筛选知识已可用。`skills/resume-screening/SKILL.md` 已记录实习生/应届生差异，以及实际淘汰案例确认的统计基础、方向一致性和中小公司稳定性风险；当前批次暂不重跑。
+纯 Codex 简历侦探技能已可用。调用 `$investigate-resumes` 后，可从招聘 URL 通过外部 Chrome 只读采集，重建事实、发现异常、比较解释并形成中小公司筛选结论；项目不包含 GUI。
 
 ## Roles
 
@@ -28,6 +28,7 @@ project_name: "简历评审台"
 - [T001 生成候选人评审看板](tickets/T001-rank-resumes.md): completed, approved
 - [T002 建立分人群筛选规则](tickets/T002-screening-rules.md): completed, approved
 - [T003 沉淀实际筛选判断](tickets/T003-capture-screening-judgment.md): completed, approved
+- [T004 重构简历侦探流程](tickets/T004-investigate-resumes.md): completed, approved
 
 ## Decisions
 

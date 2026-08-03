@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Investigator"
+  short_description: "Investigate resumes and explain small-company hiring risk"
+  default_prompt: "Use $investigate-resumes to investigate this recruitment URL and explain the hiring decision."
