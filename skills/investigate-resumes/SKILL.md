@@ -120,6 +120,19 @@ Assume structured training, rotation, and long trial periods are limited. Prefer
 
 ## Confirmed Investigation Lenses
 
+### Independent Inquiry
+
+Treat independent analytical ability as a bonus dimension and judge it from the candidate's work, not from identity or affiliation. Award positive evidence when the candidate:
+
+- discovers important problems beyond the assigned task;
+- questions metric definitions and default assumptions;
+- proposes competing explanations and actively searches for counterevidence;
+- explains a method's assumptions, applicability, and limitations;
+- changes an earlier conclusion when new evidence contradicts it;
+- builds an original reasoning chain instead of merely repeating authority, templates, or fashionable language.
+
+Keep the score neutral when a short resume contains none of these signals; absence is not proof of inability. Give more credit to a concrete example that completes the loop from discovering a problem through challenging assumptions and testing counterevidence to revising a conclusion. Use the highest-value missing behavior as an interview verification question.
+
 ### Statistical Foundation
 
 For data-analysis roles, require statistical reasoning evidence through a relevant major and core training, systematic courses, or a concrete project using indicator design, sampling, hypothesis testing, regression, causal inference, or model validation. School level cannot compensate for missing statistical foundations.
@@ -145,9 +158,10 @@ Use this lens only when several clues coexist, such as a graduation-to-study gap
 
 Discuss one candidate at a time. Treat the first explanation as a hypothesis. After recruiter feedback:
 
-1. restate the hidden judgment in reusable terms;
-2. identify the observations that made the inference possible;
-3. define counterevidence that would prevent overgeneralization;
-4. add only the confirmed investigation pattern to this skill.
+1. use recruiter prompts to widen the hypothesis search beyond the first obvious explanation;
+2. extract the confirmed, job-relevant capability or business risk from the discussion;
+3. translate it into observable behavior;
+4. identify supporting observations and counterevidence that prevents overgeneralization;
+5. store only the confirmed investigation pattern, not the prompt that elicited it.
 
 Store no candidate names, contact details, or raw resume text.
