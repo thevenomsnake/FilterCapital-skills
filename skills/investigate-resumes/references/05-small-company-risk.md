@@ -8,6 +8,7 @@ Consider evidence combinations involving:
 
 - unclear direction or repeated temporary choices;
 - high external optionality without commitment evidence;
+- stated career goals or status expectations that do not match the actual role;
 - approaching graduation while applying for an internship without a credible duration or conversion plan;
 - geographically clustered short opportunities that are difficult to access casually;
 - unclear employment status around education gaps;
@@ -22,6 +23,19 @@ Do not use school or employer prestige as an independent ability or stability si
 Raise stability risk when high external optionality, low major-role fit, low recent convergence, and missing commitment evidence appear together. Allow sustained recent work, a credible transition story, or specific understanding of the role and small-company context to overturn the risk.
 
 Treat a near-graduate application to an internship as a short-term landing-place signal when the remaining student period is brief and the resume gives no credible internship duration, post-graduation conversion plan, or reason to choose this company. Combine it with other evidence; do not reject merely because graduation is near.
+
+## Role Expectation Gap
+
+Reconstruct the actual daily work before judging fit. For this company, game data analysis is primarily product and operational work: event and metric definitions, SQL extraction, data quality, recurring monitoring, experiments, and decision support. Advanced data-science research or AI model development is occasional rather than the role's center.
+
+Raise expectation-gap risk when several signals coexist:
+
+- an elite graduate program and strong grades create high external optionality;
+- the candidate explicitly targets data scientist, AI model engineer, research, or similarly model-centered work;
+- the resume emphasizes sophisticated methods or academic status but gives no reason to choose practical game analysis;
+- the role would likely feel less prestigious, technical, or novel than the candidate expects.
+
+Treat this as a satisfaction and retention forecast, not a penalty for ambition or academic success. Counterevidence includes sustained product-analysis work, concrete interest in game business questions, comfort with routine data quality and monitoring, and a credible reason to grow in a small-company analyst role.
 
 ## Fast-Start Requirement
 
