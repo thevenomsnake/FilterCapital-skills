@@ -15,14 +15,14 @@ FilterCapital-skills 的核心调查与判断结构不预设岗位；任何岗�
 
 - 作品归因抽象为展示载体、既有来源、个人贡献和验证结果，不绑定平台、代码仓库或具体措辞。
 - 快速上手、能力深度、独立探究和小公司风险使用岗位中立语言，并从 JD 推导证据等价物。
-- 数据分析的定量基础规则保留为条件分支，对其他岗位返回 `not applicable`。
+- 数据分析的定量基础规则移入独立 profile；通用能力模块只负责加载 profile 和接收其门槛结果。
 - 公司规模、受众和教育门槛只有在招聘方或 JD 明确确认时才激活，未确认时返回 `not applicable` 或请求澄清。
 - 排序采用“岗位相关基础 + 完整、可归因工作链”的通用结构，具体基础随岗位变化。
 
 ## Boundaries
 
 - 不虚构尚未确认的中公司、大公司或社招阈值。
-- 不删除已确认的数据分析岗位知识，只限制其适用范围。
+- 不删除已确认的数据分析岗位知识，将其迁移到明确适用范围的 profile。
 - 不保存候选人姓名、原始简历或具体触发措辞。
 
 ## Reads First
@@ -34,6 +34,7 @@ FilterCapital-skills 的核心调查与判断结构不预设岗位；任何岗�
 - `skills/filtercapital-skills/references/04-independent-inquiry.md`
 - `skills/filtercapital-skills/references/05-small-company-risk.md`
 - `skills/filtercapital-skills/references/06-decision.md`
+- `skills/filtercapital-skills/profiles/game-data-analysis.md`
 
 ## Completion Check
 
@@ -47,8 +48,8 @@ FilterCapital-skills 的核心调查与判断结构不预设岗位；任何岗�
 
 ## Completion
 
-- Behavior: 核心模块已按岗位中立证据结构运行；岗位专属知识改为显式条件分支，作品归因不再依赖平台或关键词。
+- Behavior: 核心模块已按岗位中立证据结构运行；岗位专属知识由独立 profile 承载，作品归因不再依赖平台或关键词。
 - Validation: `quick_validate.py skills/filtercapital-skills` 与定向内容断言通过。
-- Evidence: `SKILL.md`、`references/00-eligibility.md`、`01-investigate.md`、`02-capability.md`、`04-independent-inquiry.md`、`05-small-company-risk.md`、`06-decision.md`。
+- Evidence: `SKILL.md`、`profiles/game-data-analysis.md`、`references/00-eligibility.md`、`01-investigate.md`、`02-capability.md`、`04-independent-inquiry.md`、`05-small-company-risk.md`、`06-decision.md`。
 - Commit or artifact: 本次岗位中立抽象修正提交。
 - Blocker: none

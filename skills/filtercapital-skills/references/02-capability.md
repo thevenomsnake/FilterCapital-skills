@@ -44,24 +44,15 @@ Require at least one concrete practice or delivery. Without real-context or end-
 
 ### Ranking Signals Within The Passing Pool
 
-For every target role, derive its durable foundation from the JD and recruiter context, then rank candidates who clear the applicable gates by that foundation and the completeness of their own problem chain. A role-relevant foundation plus concrete work that identifies inputs or constraints, method choice, output, and user, decision, or operational use is a strong first-round signal. It should outrank adjacent exposure, generic tool lists, and vague work-sample titles. A missing formal internship is not a reason to mechanically downgrade this combination; coursework, personal projects, competitions, research, volunteering, or other settings can be sufficient when the work is specific and attributable.
+For every target role, load its matching profile when available and use that profile's foundation and qualitative priorities. Without a profile, derive only a provisional foundation from the JD and recruiter context. Then rank candidates who clear the applicable gates by that role-relevant foundation and the completeness of their own problem chain. Concrete work that identifies inputs or constraints, method choice, output, and user, decision, or operational use should outrank adjacent exposure, generic tool lists, and vague work-sample titles. A missing formal internship is not a reason to mechanically downgrade this combination; coursework, personal projects, competitions, research, volunteering, or other settings can be sufficient when the work is specific and attributable.
 
 Specificity improves evidence discrimination but does not erase the automation baseline: externally supplied or easily reproducible work still needs candidate-owned definitions, judgment, validation, correction, and a consequential result before it supports higher capability depth.
 
-## Conditional Lens - Data-Analysis Foundation
+## Role Profile Overlay
 
-Apply this section only when the target role requires data analysis. For every other role, mark this lens `not applicable` and derive any specialized foundation requirement from that role's JD or recruiter-confirmed standard; never export quantitative criteria as a universal gate.
+When the selected profile defines a specialized foundation gate, run it independently from fast-start and return `pass`, `fail`, or `uncertain` using only that profile's evidence rules. A `fast-start pass` proves current process readiness; it does not prove a specialized foundation.
 
-Run this gate independently from fast-start. A `fast-start pass` proves current process readiness; it does not prove a data-analysis foundation.
-
-For a data-analysis target role, foundation evidence requires either:
-
-- sustained quantitative training shown by a major with relevant curriculum or explicitly listed core courses in mathematics, statistics, computer science, econometrics, operations research, or another systematic quantitative track; or
-- repeated, real, attributable analytical work showing indicator or metric definitions, method selection, validation, error correction, and a decision or usable result beyond commodity execution.
-
-Mark the gate `fail` when both undergraduate and graduate paths lack clear quantitative training and the remaining evidence consists only of public, tutorial, template-based, or AI-assisted SQL/BI/cleaning workflows without candidate-owned judgment. Mark `uncertain` when the source omits the course or work detail needed to distinguish those cases. A related graduate title, school level, professional label, or SQL/Python keyword cannot substitute for the missing training or reasoning evidence.
-
-Treat a non-quantitative education path as a combination signal, not a standalone rejection rule. Continuous, real, attributable analysis with rigorous definitions, method choices, validation, correction, and decision outcomes can demonstrate that the required thinking has been acquired and can overturn the concern.
+When no profile matches and the recruiter has not explicitly confirmed a foundation gate, return `not applicable`. Do not invent a hard gate or import another profile's professional standards.
 
 ## Capability Score
 

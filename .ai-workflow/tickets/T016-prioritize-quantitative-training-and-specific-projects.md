@@ -9,7 +9,7 @@ role: project-lead
 
 ## Outcome
 
-FilterCapital-skills 在通用分析岗位的通过候选人中，优先识别系统定量训练与完整、可归因的问题链，不因缺少正式实习而机械降级，也不把公开项目的流程熟悉度夸大为高级能力。
+FilterCapital-skills 在游戏数据分析 profile 的通过候选人中，优先识别系统定量训练与完整、可归因的问题链，不因缺少正式实习而机械降级，也不把公开项目的流程熟悉度夸大为高级能力。
 
 ## Acceptance
 
@@ -20,13 +20,14 @@ FilterCapital-skills 在通用分析岗位的通过候选人中，优先识别�
 
 ## Boundaries
 
-- 定量训练只作为数据分析等明确需要该基础的岗位分支；通用排序结构按目标岗位、公司上下文和受众解释，不绑定具体行业、学校或候选人。
+- 定量训练只保存在游戏数据分析等明确需要该基础的 profile 中；通用排序结构不绑定专业、行业、学校或候选人。
 - 排序信号不新增加权总分，也不替代 eligibility、foundation 或 fast-start 门槛。
 
 ## Reads First
 
 - `skills/filtercapital-skills/references/02-capability.md`
 - `skills/filtercapital-skills/references/06-decision.md`
+- `skills/filtercapital-skills/profiles/game-data-analysis.md`
 
 ## Completion Check
 
@@ -42,6 +43,6 @@ FilterCapital-skills 在通用分析岗位的通过候选人中，优先识别�
 
 - Behavior: 已将系统定量训练与具体、可归因项目链设为通过候选人的首轮排序强信号；缺少正式实习不再机械降级，公开项目仍受 automation baseline 约束。
 - Validation: `quick_validate.py skills/filtercapital-skills` 与定向内容断言通过。
-- Evidence: `references/02-capability.md`、`06-decision.md`。
+- Evidence: `profiles/game-data-analysis.md`、`references/02-capability.md`、`06-decision.md`。
 - Commit or artifact: 本次 FilterCapital-skills 规则更新提交。
 - Blocker: none

@@ -32,6 +32,7 @@ FilterCapital-skills 将快速上手证据与数据分析基础证据独立判�
 
 - `skills/filtercapital-skills/references/02-capability.md`
 - `skills/filtercapital-skills/references/06-decision.md`
+- `skills/filtercapital-skills/profiles/game-data-analysis.md`
 
 ## Completion Check
 
@@ -47,6 +48,6 @@ FilterCapital-skills 将快速上手证据与数据分析基础证据独立判�
 
 - Behavior: 已明确 fast-start 与 data-analysis foundation 独立；commodity 公开流程不能替代长期定量训练或候选人自身判断，且 foundation 失败阻断推进。
 - Validation: `quick_validate.py skills/filtercapital-skills` 与定向内容断言通过。
-- Evidence: `references/02-capability.md`、`06-decision.md`。
+- Evidence: `profiles/game-data-analysis.md`、`references/02-capability.md`、`06-decision.md`。
 - Commit or artifact: 本次 FilterCapital-skills 规则更新提交。
 - Blocker: none

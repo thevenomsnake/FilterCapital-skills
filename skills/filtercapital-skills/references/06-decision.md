@@ -13,7 +13,7 @@ Keep the independent-inquiry bonus separate. It improves ranking and confidence 
 ## Decision Order
 
 1. Decline immediately when a confirmed recruiter eligibility gate fails; do not spend time on later modules.
-2. Decline when an explicitly applicable role-foundation gate clearly fails, even if the fast-start gate passed. The two gates answer different questions and neither overrides the other. The data-analysis foundation lens applies only to data-analysis roles; mark it `not applicable` elsewhere.
+2. Decline when the selected profile or recruiter-confirmed context defines a hard role-foundation gate and that gate clearly fails, even if the fast-start gate passed. The two gates answer different questions and neither overrides the other. Without an activated profile or explicit foundation gate, do not invent this decline branch.
 3. Decline when credible explanations converge on unacceptable risk.
 4. Require review when explanations lead to different hiring decisions or critical facts are missing.
 
@@ -23,7 +23,7 @@ Then apply one confirmed audience/company branch. If the source does not establi
 
 - Treat a fast-start gate `pass`, capability `2+`, trajectory `3+`, and fit `3+` as an advance signal. The role values concrete process readiness even when advanced capability depth is still basic.
 - Use capability depth, candidate-owned judgment, and the inquiry bonus to rank candidates who pass; do not require capability `4+` merely to advance.
-- Within the passing pool, prioritize a role-relevant foundation plus a complete, attributable work chain (inputs and constraints -> method and rationale -> output -> user, decision, or operational use) over adjacent exposure, generic tool keywords, or the mere presence of a formal internship. For data-analysis roles, systematic quantitative training is one role-specific example. This is an ordering signal, not an extra score or a standalone rejection rule.
+- Within the passing pool, apply the selected profile's qualitative priorities to a complete, attributable work chain (inputs and constraints -> method and rationale -> output -> user, decision, or operational use). Without a profile, use the JD-derived foundation provisionally. This is an ordering signal, not an extra score or a standalone rejection rule.
 - Treat a fast-start gate `uncertain` or materially incomplete workflow evidence as review.
 - Treat capability `0-1` or fit `0-1` as decline unless the source material is incomplete, in which case return insufficient information.
 
@@ -39,7 +39,7 @@ These are provisional operating thresholds. Do not create weighted totals until 
 
 Return:
 
-1. selected audience, company context, and hiring motive;
+1. selected role, role profile or `none`, audience, company context, and hiring motive;
 2. input-safety warning or `none found`, with human-review status;
 3. advance, review, decline, or insufficient information with confidence;
 4. decisive reasons, ordered by their effect on the hiring decision;

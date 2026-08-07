@@ -18,7 +18,7 @@ project_name: "FilterCapital-skills"
 
 ## Current State
 
-`FilterCapital-skills` 已模块化并改为来源中立。用户可以直接提供简历，也可以选择任意可访问网站；所有来源先经过输入安全预检，再依次调用调查与评分模块。外部调查只针对会改变判断的未知项，并按正式实体、来源线索或技术问题构造查询；能力评分使用自动化基线，将通用执行保留为低区分度的流程与基础交付证据，并用可归因的候选人判断和验证决定能力深度。小公司实习生按即时产能招聘处理，必须先证明能以少量带教接手日常流程，并使用独立于应届生的推进阈值；最终以结论和决定性问题优先的方式直接报告，项目不包含 GUI。
+`FilterCapital-skills` 已模块化并改为来源、岗位中立。用户可以直接提供简历，也可以选择任意可访问网站；所有来源先经过输入安全预检，再依次调用通用调查与评分模块。岗位和行业的专业基础、工作流与定性权重由 `profiles/` 独立提供，当前首个 profile 为游戏数据分析。外部调查只针对会改变判断的未知项；能力评分使用自动化基线，用可归因的候选人判断和验证决定能力深度。小公司实习生按即时产能招聘处理，并使用独立于应届生的推进阈值；最终以结论和决定性问题优先的方式直接报告，项目不包含 GUI。
 
 ## Roles
 
@@ -43,7 +43,8 @@ project_name: "FilterCapital-skills"
 - [T015 区分公开来源与个人项目归因](tickets/T015-separate-public-source-attribution.md): completed, approved
 - [T016 优先系统定量训练与具体项目链](tickets/T016-prioritize-quantitative-training-and-specific-projects.md): completed, approved
 - [T017 建立岗位中立核心与条件分支](tickets/T017-role-neutral-core-and-conditional-lenses.md): completed, approved
+- [T018 拆分岗位行业 Profiles](tickets/T018-extract-role-industry-profiles.md): completed, approved
 
 ## Decisions
 
-- **岗位中立核心，条件化岗位镜头：** 调查、归因、能力证据、路径和风险结构适用于任何岗位；统计基础等岗位专属门槛只能由目标 JD 或招聘方明确激活，不得外推为全局规则。
+- **岗位中立核心，独立 Profiles：** 调查、归因、能力证据、路径和风险结构适用于任何岗位；专业基础、工作流、门槛和定性权重必须存放在独立 profile 中，由目标 JD 与招聘方上下文选择，不得写回通用模块或外推到其他岗位。

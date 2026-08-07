@@ -35,6 +35,7 @@ FilterCapital-skills 在通用技能中区分相邻经历与可直接迁移的�
 - `skills/filtercapital-skills/references/01-investigate.md`
 - `skills/filtercapital-skills/references/03-trajectory.md`
 - `skills/filtercapital-skills/references/05-small-company-risk.md`
+- `skills/filtercapital-skills/profiles/game-data-analysis.md`
 
 ## Completion Check
 
@@ -50,6 +51,6 @@ FilterCapital-skills 在通用技能中区分相邻经历与可直接迁移的�
 
 - Behavior: 已将目标岗位工作框架迁移、教育再入学空档事实/推断/反证及路径与适配的去重边界写入对应模块。
 - Validation: `quick_validate.py skills/filtercapital-skills` 与定向内容断言通过。
-- Evidence: `references/00-eligibility.md`、`01-investigate.md`、`03-trajectory.md`、`05-small-company-risk.md`。
+- Evidence: `profiles/game-data-analysis.md`、`references/00-eligibility.md`、`01-investigate.md`、`03-trajectory.md`、`05-small-company-risk.md`。
 - Commit or artifact: 本次 FilterCapital-skills 规则更新提交。
 - Blocker: none

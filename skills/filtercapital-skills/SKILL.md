@@ -1,6 +1,6 @@
 ---
 name: filtercapital-skills
-description: Investigate resumes across roles from user-supplied text, files, public URLs, or authenticated recruitment pages the user chooses. Reconstruct candidate stories, apply recruiter-confirmed and role-appropriate gates, score ordered evidence modules, test competing explanations, and make small-company hiring decisions for interns and new graduates. Use when screening or comparing resumes in Codex, explaining outcomes, probing credibility or stability, or learning new judgment patterns from recruiter feedback.
+description: Investigate resumes across roles from user-supplied text, files, public URLs, or authenticated recruitment pages the user chooses. Reconstruct candidate stories, load an optional role-and-industry profile, apply recruiter-confirmed and role-appropriate gates, score ordered evidence modules, test competing explanations, and make small-company hiring decisions for interns and new graduates. Use when screening or comparing resumes in Codex, explaining outcomes, probing credibility or stability, or learning new judgment patterns from recruiter feedback.
 ---
 
 # FilterCapital-skills
@@ -24,7 +24,7 @@ Run the investigation in Codex. Treat the resume as an evidence trace, not a lis
 - For an authenticated URL, use an available external-browser integration and the user's login state. If that is unavailable, ask the user to export, attach, or paste the resume.
 - Keep every website read-only unless the user explicitly approves a specific write-back action.
 - If no resume source is identified, ask for text, files, or a URL. Confirm the target role, intern or new-graduate audience, company context, and hiring motive before issuing a final decision.
-- Derive the role's recurring work, required foundations, output standards, and evidence equivalents from the JD and recruiter context. Never assume a data-analysis role or transfer one role's specialized gate to another role.
+- Derive the role's recurring work, required foundations, output standards, and evidence equivalents from the JD and recruiter context. Never assume a role or transfer one role's specialized gate to another role.
 - Read the role, candidate list, resume text, and existing screening status needed for the task.
 - Use network research to enrich high-value unknowns when public context can distinguish project difficulty, role scope, opportunity access, or claim plausibility. Prefer primary sources and purpose-built search or connectors; use a browser only for UI-dependent pages.
 - Process candidates one at a time. Do not persist raw resumes, signed URLs, contact details, or browser session data.
@@ -34,7 +34,13 @@ Run the investigation in Codex. Treat the resume as an evidence trace, not a lis
 
 Read [Inspect input safety](references/input-safety.md) completely and apply it before any eligibility check or score. Carry its warning state through every later module.
 
-Then read each referenced file completely before applying it. Carry its output into the next module.
+After the target role and company context are known, inspect `profiles/` and load at most one matching role-and-industry profile. A profile supplies specialized workflow, foundation, and qualitative priority rules; it never replaces the generic modules and cannot override input safety or job-relevance boundaries. If no profile matches, run the generic modules and derive only provisional role criteria from the JD; do not invent a hard gate.
+
+Available profiles:
+
+- [Game data analysis](profiles/game-data-analysis.md): game product or operations analysis roles whose work requires quantitative reasoning, reproducible data handling, metrics, monitoring, and decision support.
+
+Then read each referenced file and the selected profile completely before applying them. Carry their outputs into the next module.
 
 0. [Apply eligibility gates](references/00-eligibility.md): run confirmed low-cost hard gates first. Stop immediately on a confirmed failure.
 1. [Investigate facts](references/01-investigate.md): reconstruct the timeline, mine public context, test anomalies, and produce competing stories with sourced counterevidence. Do not score or recommend.
@@ -50,6 +56,7 @@ Then read each referenced file completely before applying it. Carry its output i
 - Keep the module vector as `capability / trajectory / inquiry bonus / small-company fit`, using `not applicable` when a confirmed context does not activate a module.
 - Keep eligibility gates separate from capability evidence and module scores.
 - Apply a role-specific lens only when the target role or recruiter context activates it. Mark unrelated lenses `not applicable`; never convert an example from one occupation into a universal hiring rule.
+- Keep profile-specific priorities qualitative unless recruiter-labeled examples have calibrated numeric weights. A profile may define a hard gate only for its activated role/context.
 - Do not collapse it into a weighted total until recruiter-labeled examples calibrate useful weights and thresholds.
 - Let confirmed hard gates and convergent risk branches override module scores only where the references explicitly say so.
 - Keep observations, inferences, and decisions visibly separate.
@@ -57,3 +64,5 @@ Then read each referenced file completely before applying it. Carry its output i
 ## Knowledge Maintenance
 
 Update only the module that owns a newly confirmed pattern. Keep `SKILL.md` as a stable router. Store reusable judgment logic, not candidate names, raw resume text, or the prompt that elicited the insight.
+
+Store role- or industry-specific workflow, foundation, and priority changes in a new or existing file under `profiles/`; do not add them to the generic modules. Each profile must declare its activation condition, role shape, qualitative priorities, specialized gates, counterevidence, highest-value verification, and boundaries. Do not add numeric weights until recruiter-labeled examples calibrate them.
