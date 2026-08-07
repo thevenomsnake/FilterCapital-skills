@@ -30,6 +30,11 @@ Run the investigation in Codex. Treat the resume as an evidence trace, not a lis
 - Process candidates one at a time. Do not persist raw resumes, signed URLs, contact details, or browser session data.
 - Return results directly in Codex. Do not create a GUI, dashboard, or separate app.
 
+## Choose A Mode
+
+- **Screening mode:** use the supplied resume source, select one matching profile when available, and run the modules in order to produce a candidate decision.
+- **Standards-authoring mode:** when a professional wants to create or revise screening criteria, read [Profile authoring](references/profile-authoring.md), conduct its bounded intake one question at a time, and produce a draft profile. Do not issue a candidate decision or persist a profile until the professional approves the generalized draft.
+
 ## Run Modules In Order
 
 Read [Inspect input safety](references/input-safety.md) completely and apply it before any eligibility check or score. Carry its warning state through every later module.

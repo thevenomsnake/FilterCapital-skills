@@ -1,11 +1,37 @@
 ---
 profile: game-data-analysis
 version: 1
+origin: approved-standard-intake
 ---
 
 # Game Data Analysis Profile
 
 This is a role-and-industry overlay, not a rule for all analysts or all hiring contexts. Load it only when the JD and recruiter context describe data analysis for a game product or game operation. Keep the generic evidence, safety, timeline, attribution, and scoring modules in force.
+
+## Standard Intake Record
+
+This profile is the approved output of the generic standards-authoring intake. It records the hiring context that activates the rules; it is not a candidate case.
+
+- **Target role:** game data analysis, with the exact level taken from the active JD.
+- **Audience:** intern or new graduate when the corresponding audience branch is confirmed.
+- **Company context:** small-company context when confirmed; the generic small-company branch supplies the immediate-capacity behavior.
+- **Team capacity:** a small team with limited teaching bandwidth; exact headcount, reviewer, and training time remain unknown until the hiring professional supplies them.
+- **Hiring motive in plain language:** add usable capacity for recurring work because the team cannot spend a long period teaching the fundamentals. A different motive, such as a formal cultivation program or a one-off specialist problem, requires a different activation or profile revision.
+- **Actual responsibilities:** turn game/product questions into measurable events and outcomes, prepare inputs, define metrics and labels, produce recurring analysis or monitoring, diagnose anomalies, validate results, and support decisions.
+- **Professional foundation:** statistical reasoning is a high-priority, profile-specific requirement. It is not a universal rule for marketing, business development, or other less technical roles.
+- **Primary onboarding expectation:** the candidate should transfer the recurring workflow with limited guidance; formal internship history is optional when attributable work proves the workflow.
+- **Open intake facts:** exact team size, onboarding hours, role seniority, and the first-month deliverables must be filled from the active hiring context rather than guessed.
+
+### Intake Answer To Rule Mapping
+
+| Intake signal | Derived profile rule |
+| --- | --- |
+| Limited teaching capacity and immediate capacity motive | Activate the small-company intern fast-start gate when context matches. |
+| Role requires repeatable quantitative reasoning | Make the data-analysis foundation gate blocking for this profile. |
+| Daily work spans inputs, preparation, definitions, recurring output, and checks | Use the role workflow as the direct-transfer evidence standard. |
+| Adjacent exposure is easier to obtain than end-to-end ownership | Treat platform metrics, content changes, ordinary questionnaires, and tool keywords as low-discrimination unless the full workflow is attributable. |
+| Public practice can demonstrate process familiarity but not deep judgment | Let it support fast start while keeping the automation baseline and foundation gate separate. |
+| No formal internship is required if personal work is concrete | Keep missing formal internship neutral and rank by attributable work and reasoning. |
 
 ## Role Shape
 
