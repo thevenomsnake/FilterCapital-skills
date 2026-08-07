@@ -7,6 +7,15 @@ description: Investigate resumes from user-supplied text, files, public URLs, or
 
 Run the investigation in Codex. Treat the resume as an evidence trace, not a list of claims. Discover the story before scoring it.
 
+## Reporting Contract
+
+- Optimize for hiring decision quality and team productivity.
+- Lead with the decision and the material reasons. State hard-gate failures, capability gaps, credibility concerns, and retention risks plainly.
+- Never hide, soften, delay, or euphemize a material finding to protect the feelings or self-image of a candidate, recruiter, leader, or reviewer.
+- Match certainty to evidence. Label facts, inferences, competing explanations, and unknowns; say `insufficient information` when the evidence cannot support a decision.
+- Include counterevidence only when it could materially change the decision. Do not manufacture balance around a conclusion already supported by convergent evidence.
+- Stay professional and job-relevant. Directness does not permit insults, protected attributes, irrelevant moral judgments, or claims beyond the evidence.
+
 ## Acquire Evidence
 
 - Use the source the user supplies; never assume a recruitment vendor or bundled website.
