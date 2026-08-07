@@ -34,7 +34,9 @@ Sort all entries by month. For each entry record:
 - overlap with education, work, or other projects;
 - whether labels such as `internship`, `employment`, or `project lead` fit the dates.
 
-Flag gaps, overlaps, short stays, unexplained transitions, and post-graduation work labeled as an internship. A gap or overlap is neutral until other evidence gives it meaning.
+Calculate the elapsed calendar-month difference between every adjacent education node. If only years are available, record the interval as approximate. For a degree-completion month followed by a later enrollment month, explicitly record an **education re-entry gap** with its month count and whether work, internship, project, research, skill output, or another verifiable activity is documented during it. When the interval is about 12 months or longer and no such activity is listed, label the fact `unexplained education re-entry gap`; do not supply a cause.
+
+Flag other gaps, overlaps, short stays, unexplained transitions, and post-graduation work labeled as an internship. A gap or overlap is neutral until other evidence gives it meaning; the education re-entry label is a precise fact for the trajectory module, not a hiring conclusion.
 
 ### Stage 4 - Create A Case Sheet For Every Project Or Role
 
@@ -43,13 +45,14 @@ Create one case sheet for every substantive project, research item, competition,
 Record:
 
 - **Problem:** What task or business question was supposedly solved?
-- **Origin:** Coursework, tutorial, virtual experience, public competition, assigned company work, self-initiated work, or unknown?
+- **Origin:** Coursework, tutorial, virtual experience, public competition, assigned company work, self-initiated work, public repository, or unknown?
 - **Inputs:** Data source, acquisition burden, scale, cleanliness, labels, and access constraints.
 - **Candidate action:** Exact personal decisions, methods, code, analysis, coordination, or delivery claimed.
 - **Difficulty sources:** Ambiguity, data acquisition, cleaning, method selection, engineering, validation, domain knowledge, permissions, and stakeholder coordination.
 - **Execution coverage:** Which stages are evidenced: framing, acquisition, cleaning, analysis/modeling, validation, delivery, deployment, monitoring, iteration?
 - **Ownership:** Observer, participant, executor, primary owner, team lead, or unknown, based only on evidence.
-- **Artifacts:** Repository, report, dashboard, model, publication, competition record, product, or other inspectable output.
+- **Artifacts:** Repository URL, owner or organization, branch/commit history, report, dashboard, model, publication, competition record, product, or other inspectable output. Record only what is available; never retain private credentials or session data.
+- **Public-source attribution:** Record the candidate's exact wording when a project is described as `from GitHub`, `on GitHub`, or by a repository URL, and separately record actual personal contribution. `from GitHub` may be an English preposition mistake intended to mean that the work is hosted on GitHub; treat it first as expression ambiguity, not as evidence of copying. Hosting/source disclosure, repository details, change scope, candidate-owned decisions, validation, and result changes are separate facts.
 - **Outcome:** Claimed result, baseline, metric definition, attribution, and whether the result is independently checkable.
 - **Missing proof:** The smallest missing fact that would materially change later evaluation.
 
@@ -112,6 +115,8 @@ Compare the case sheet with external context:
 - Is the result personal, team-level, department-level, or unclear?
 - Does an artifact or operational feedback prove completion beyond a resume sentence?
 
+When a project says `from GitHub` but gives no repository, change scope, personal decision, validation, or changed result, preserve two separate findings: the wording is ambiguous and contribution is unverified. Do not call the project copied or fraudulent. Until clarified, classify only the evidence actually shown (usually `guided reproduction` or `commodity workflow` at most) and add one focused interview question: was the project hosted on GitHub or sourced from GitHub, and what repository, commits, personal changes, validation, and result change can the candidate show?
+
 Preserve mismatches as anomalies. Do not label them false without evidence.
 
 ### Stage 7 - Mine Cross-Entry Patterns
@@ -124,6 +129,8 @@ Look across the full fact map for:
 - institution names standing in for personal evidence;
 - repeated authority-impact mismatches;
 - repeated project templates or unusually uniform wording;
+- public-source/hosting wording that does not line up with repository, ownership, or contribution evidence;
+- education re-entry gaps and whether documented accumulation exists during them;
 - anomalies relative to candidates for the same role.
 
 Use geography only to understand opportunity provenance, never to penalize a region or hometown. Prefer combinations of weak signals over one impressive or suspicious detail.
@@ -160,8 +167,9 @@ Return only:
 2. project and role case sheets;
 3. sourced external context with confidence;
 4. execution-status and difficulty classifications;
-5. cross-entry anomalies;
-6. competing stories with supporting and contradicting evidence;
-7. unknowns, counterevidence, and research limits.
+5. source, ownership, and attribution ambiguities with the smallest verification question;
+6. cross-entry anomalies;
+7. competing stories with supporting and contradicting evidence;
+8. unknowns, counterevidence, and research limits.
 
 Do not include a score or hiring recommendation. Later modules must be able to work from this handoff without rereading raw personal information.

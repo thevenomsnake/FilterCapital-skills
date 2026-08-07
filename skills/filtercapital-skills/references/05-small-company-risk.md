@@ -16,6 +16,8 @@ Consider evidence combinations involving:
 - polished or production-scale projects with unclear origin, data access, ownership, or artifacts;
 - claimed outcomes exceeding likely junior tenure, authority, or data access.
 
+A wording ambiguity such as `from GitHub` is not, by itself, a credibility, capability, or retention penalty. Treat it as a light communication/self-presentation signal and add verification burden only when repository, contribution, validation, or result evidence remains unclear alongside other packaging concerns. Do not generalize from one preposition error to overall ability.
+
 Do not use school or employer prestige as an independent ability or stability signal. A selective or resource-intensive education path may support an external-optionality hypothesis only when recent choices, role intent, and commitment evidence point in the same direction. Do not infer family wealth from a school name alone.
 
 ## Compound Stability
@@ -26,16 +28,20 @@ Treat a near-graduate application to an internship as a short-term landing-place
 
 ## Role Expectation Gap
 
-Reconstruct the actual daily work before judging fit. For this company, game data analysis is primarily product and operational work: event and metric definitions, SQL extraction, data quality, recurring monitoring, experiments, and decision support. Advanced data-science research or AI model development is occasional rather than the role's center.
+Reconstruct the actual daily work from the JD and company context before judging fit. Compare the candidate's expectations with the real level of specialization, routine work, autonomy, and feedback cycle; do not assume a particular industry or role workflow.
 
 Raise expectation-gap risk when several signals coexist:
 
 - an elite graduate program and strong grades create high external optionality;
 - the candidate explicitly targets data scientist, AI model engineer, research, or similarly model-centered work;
-- the resume emphasizes sophisticated methods or academic status but gives no reason to choose practical game analysis;
+- the resume emphasizes sophisticated methods or academic status but gives no reason to choose the target role's practical workflow;
 - the role would likely feel less prestigious, technical, or novel than the candidate expects.
 
-Treat this as a satisfaction and retention forecast, not a penalty for ambition or academic success. Counterevidence includes sustained product-analysis work, concrete interest in game business questions, comfort with routine data quality and monitoring, and a credible reason to grow in a small-company analyst role.
+Treat this as a satisfaction and retention forecast, not a penalty for ambition or academic success. Counterevidence includes sustained work in the target role's actual workflow, comfort with its routine and feedback cycle, and a credible reason to grow in the small-company role.
+
+## Boundary With Trajectory
+
+The trajectory module owns the path penalty for an unexplained education re-entry gap. Do not subtract that same gap again here. Add a small-company fit risk only when independent evidence shows a separate availability, commitment, expectation, or retention problem.
 
 ## Fast-Start Requirement
 

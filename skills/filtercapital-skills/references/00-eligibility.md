@@ -4,7 +4,11 @@ Apply confirmed low-cost recruiter gates before full resume investigation. The p
 
 ## Select The Gate Profile
 
-Record the target role, intern or new-graduate audience, company context, and hiring motive before applying audience-specific gates. This version defines a fast-start gate only for small-company interns; do not invent medium-company, large-company, or experienced-hire behavior.
+Record the target role, intern or new-graduate audience, company context, hiring motive, and the target role's recurring workflow before applying audience-specific gates. This version defines a fast-start gate only for small-company interns; do not invent medium-company, large-company, or experienced-hire behavior.
+
+## Work-Framework Transfer
+
+The fast-start gate measures whether the candidate already has a transferable way of working, not whether they have seen a dashboard or named a tool. Decompose the target role's recurring workflow from the JD or recruiter context into its relevant stages: acquiring inputs, cleaning or transforming them, defining metrics or decision logic, producing a usable recurring output, and checking quality, anomalies, or feedback. Adapt the stages to the role; do not require stages the role does not use.
 
 ## Small-Company Intern Fast-Start Gate
 
@@ -12,11 +16,13 @@ For a small-company internship, assume the opening exists to add near-term worki
 
 Mark this gate:
 
-- `pass` when at least one concrete, attributable workflow maps directly to expected daily work and covers data handling plus a usable output or quality check;
-- `fail` when the complete resume shows only courses, skill keywords, theoretical potential, or advanced methods without directly transferable routine execution;
+- `pass` when concrete, attributable work maps directly to the target workflow and covers data handling plus a usable output or quality check. One end-to-end example may be enough for a directly aligned background; an adjacent background requires repeated evidence across entries or time that the target workflow has actually been performed;
+- `fail` when the complete resume shows only adjacent exposure, courses, skill keywords, theoretical potential, or advanced methods without directly transferable routine execution;
 - `uncertain` when the resume source or expected daily work is too incomplete to distinguish those cases.
 
-For a data-analysis intern, directly transferable evidence may include SQL extraction or aggregation, data cleaning, metric or report production, dashboards, recurring monitoring, or data-quality checks. A public practice project or AI-assisted commodity workflow can pass this gate when the candidate's execution is concrete. It proves process readiness, not high analytical depth. A technology list without demonstrated use does not pass.
+For an analytical target role, directly transferable evidence may include raw-data extraction, cleaning or transformation, metric or report production, dashboards, recurring monitoring, anomaly diagnosis, or data-quality checks. Merely observing platform metrics and adjusting content, completing ordinary questionnaires, descriptive statistics, or user portraits, or listing SQL/Python does not establish this workflow when the underlying data handling and usable delivery are not shown. For example, a marketing or operations background can still pass when the resume shows repeated personal extraction, cleaning, metric definition, periodic delivery, monitoring, anomaly diagnosis, or quality checks. This is a combination judgment; do not make a major, degree title, or industry label a standalone rejection rule.
+
+A public practice project or AI-assisted commodity workflow can pass this gate when the candidate's execution is concrete. It proves process readiness, not high analytical depth. Keep that result separate from the data-analysis foundation gate: passing fast-start never implies passing foundation.
 
 Treat this as a time-to-productivity gate, not a judgment about intelligence or long-term potential. Do not count the same gate result again as analytical depth in later modules.
 

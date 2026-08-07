@@ -38,6 +38,10 @@ project_name: "FilterCapital-skills"
 - [T010 按自动化基线识别候选人自身能力](tickets/T010-adjust-capability-for-ai-era.md): completed, approved
 - [T011 保留低区分度的流程能力证据](tickets/T011-retain-process-experience.md): completed, approved
 - [T012 建立小公司实习生快速上手分支](tickets/T012-small-company-intern-fast-start.md): completed, approved
+- [T013 泛化岗位框架迁移与教育空档判断](tickets/T013-generalize-transfer-and-education-gaps.md): completed, approved
+- [T014 分离流程上手与分析基础门槛](tickets/T014-separate-foundation-from-fast-start.md): completed, approved
+- [T015 区分公开来源与个人项目归因](tickets/T015-separate-public-source-attribution.md): completed, approved
+- [T016 优先系统定量训练与具体项目链](tickets/T016-prioritize-quantitative-training-and-specific-projects.md): completed, approved
 
 ## Decisions
 

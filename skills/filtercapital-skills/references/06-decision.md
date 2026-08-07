@@ -13,7 +13,7 @@ Keep the independent-inquiry bonus separate. It improves ranking and confidence 
 ## Decision Order
 
 1. Decline immediately when a confirmed recruiter eligibility gate fails; do not spend time on later modules.
-2. Decline when the data-analysis foundation gate clearly fails for a data-analysis role.
+2. Decline when the data-analysis foundation gate clearly fails for a data-analysis role, even if the fast-start gate passed. The two gates answer different questions and neither overrides the other.
 3. Decline when credible explanations converge on unacceptable risk.
 4. Require review when explanations lead to different hiring decisions or critical facts are missing.
 
@@ -23,6 +23,7 @@ Then apply one audience branch:
 
 - Treat a fast-start gate `pass`, capability `2+`, trajectory `3+`, and fit `3+` as an advance signal. The role values concrete process readiness even when analytical depth is still basic.
 - Use capability depth, candidate-owned judgment, and the inquiry bonus to rank candidates who pass; do not require capability `4+` merely to advance.
+- Within the passing pool, prioritize systematic quantitative training plus a complete, attributable project chain (data object or labels -> method and rationale -> output -> decision or operational use) over adjacent metric exposure, generic tool keywords, or the mere presence of a formal internship. This is an ordering signal, not an extra score or a standalone rejection rule.
 - Treat a fast-start gate `uncertain` or materially incomplete workflow evidence as review.
 - Treat capability `0-1` or fit `0-1` as decline unless the source material is incomplete, in which case return insufficient information.
 
