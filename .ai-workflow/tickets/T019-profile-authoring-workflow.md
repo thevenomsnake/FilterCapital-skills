@@ -14,7 +14,7 @@ role: project-lead
 ## Acceptance
 
 - 增加 standards-authoring mode，与 candidate screening mode 分离。
-- intake 覆盖公司/团队规模、带教能力、招聘动机、实际职责、首期交付、专业基础、证据标准、风险和反证、定性权重与校准样本。
+- intake 的信息槽覆盖公司/团队、带教、招聘动机、实际职责和成功标准；专业基础、证据、风险、反证和定性权重由模型优先推导，不作为必问轮次。
 - 固定模块、输入安全、受保护属性边界、事实/推断/未知区分和不保存原始简历约束不可被 profile 覆盖。
 - profile 先生成草案并等待专业用户确认，未确认不写入文件。
 - `game-data-analysis.md` 包含标准 intake 记录及“回答 -> 规则”映射，证明现有专业规则来自该机制。
@@ -43,7 +43,7 @@ role: project-lead
 
 ## Completion
 
-- Behavior: 已提供独立标准制作模式与固定 intake；游戏数据分析 profile 记录了 intake 字段和派生规则，专业用户可按同一结构新增其他 profile。
+- Behavior: 已提供独立标准制作模式与最小充分 intake；游戏数据分析 profile 记录了 intake 字段和派生规则，专业用户可按同一结构新增其他 profile。
 - Validation: `quick_validate.py skills/filtercapital-skills` 与定向内容断言通过。
 - Evidence: `SKILL.md`、`references/profile-authoring.md`、`profiles/game-data-analysis.md`、`README.md`。
 - Commit or artifact: 本次 standards-authoring workflow 提交。

@@ -21,99 +21,75 @@ Do not create a second scoring system, hide uncertainty, use protected or irrele
 
 Enter authoring mode when the user asks to build, change, calibrate, or document hiring criteria. Do not silently switch into candidate screening. If the user provides a resume while designing a standard, treat it only as an optional anonymized example and apply input-safety rules; never save the resume or candidate identity in the profile.
 
-Ask one question at a time. Use ordinary language first, then translate the answer into a reusable rule. Do not ask for a score before the work and evidence model is clear.
+Ask one question at a time, but ask the minimum number needed. Use ordinary language first, translate the answer into a reusable rule, and infer the remaining structure yourself. Never exhaust a checklist after the profile is already derivable.
 
-## Intake Questions
+## Decisive Shortcuts
 
-Capture each answer as `fact`, `inference`, `unknown`, or `activation condition`.
+Evaluate sufficiency before every question. When the available facts already determine the operating standard, draft immediately.
 
-### 1. Hiring Context
+In particular, the combination of a small company, a very small immediate team, and hiring to relieve routine workload establishes an immediate-capacity context. If the JD or an existing role profile already describes the work, infer without further intake that:
 
-- What role and level are you hiring for?
-- Is this an intern, new graduate, or another audience supported by the project?
-- What kind of company and operating environment is this? What should remain unknown until confirmed?
+- fast-start is blocking;
+- long foundational training is unavailable;
+- current delivery capacity outweighs abstract potential;
+- requirement comprehension, speed to productivity, low-error output, self-checking, and transfer from one taught example to similar tasks are high-priority success criteria;
+- evidence of only keywords, exposure, or future learning potential cannot compensate for missing transferable execution.
 
-Plain-language prompt: `你们是什么公司、什么阶段、团队大概多大？这个人是给哪个团队补什么位置？`
+Present these as explicit inferences in the draft so the professional can correct them. Do not ask the professional to restate each implication.
+
+## Minimum Intake
+
+Capture each answer as `fact`, `inference`, `unknown`, or `activation condition`. Reuse facts the user has already supplied instead of asking them again. The four themes below are information slots, not four mandatory questions; existing JD/profile context may fill most of them before the interview begins.
+
+### 1. Context And Team
+
+Establish the role/audience, company situation, immediate team size, who can review the work, and whether learning happens through formal training or real tasks.
+
+Plain-language prompt: `你们是什么公司和团队？这个人来了跟谁做事，平时怎么带？`
 
 Collect only context that changes the standard. Exact company names, precise headcounts, proprietary metrics, and internal project names may stay transient or be generalized before persistence.
 
-### 2. Team Capacity
+### 2. Hiring Motive
 
-- How many people are on the immediate team?
-- Who can review or teach the new hire, and how much time is realistically available?
-- Is there a documented training program, or is the person expected to contribute quickly?
+Ask why the team is hiring now. Normalize the answer internally as immediate capacity, replacement, a known blocker, missing capability, structured cultivation, or exploratory hiring.
 
-Plain-language prompt: `团队多少人？谁能带？每天能花多少时间教？还是来了就要接活？`
+Plain-language prompt: `为什么现在招？是日常活太多、有人要补位、一个问题搞不定，还是想培养人？`
 
-### 3. Hiring Motive
+Immediate capacity raises fast-start priority. A cultivation pipeline can lower it and raise learning or inquiry priority. Do not ask the user to classify the motive if their own words already make it clear.
 
-Record the operational motive in the user's own words, then normalize it into one or more categories:
+### 3. Actual Work
 
-- immediate capacity or routine workload relief;
-- temporary replacement or coverage;
-- a known blocker or unresolved problem;
-- a new capability the team does not have;
-- a structured cultivation pipeline;
-- exploratory or future hiring.
+Only when the JD or existing profile is insufficient, ask what the person repeatedly handles and produces. Use the answer to reconstruct inputs and constraints -> candidate decisions -> output -> quality/validation -> user, stakeholder, or operational effect.
 
-Plain-language prompt: `为什么现在招？是缺人做杂活、有人离开、卡在一个问题上，还是准备培养人？`
+Plain-language prompt: `别讲岗位名称，来了以后主要接哪些活？`
 
-Do not treat these categories as interchangeable. Immediate capacity raises fast-start priority; a cultivation pipeline can lower it and raise learning or inquiry priority.
+Infer tools, workflow stages, ownership, and likely evidence from the work description. Ask about a missing stage only when it would change fast-start or profile activation.
 
-### 4. Actual Work
+### 4. What Good Looks Like
 
-- What does the person do repeatedly each week?
-- What are the first deliverables in the first 30-90 days?
-- Which inputs, tools, stakeholders, permissions, quality checks, and decisions are part of the work?
-- What is explicitly outside the role?
+Only when success cannot be safely inferred from the company, team, motive, and work, ask the professional to describe successful delivery in their own words. Listen for requirement comprehension, time to productivity, output quality or error control, independence, and transfer from one taught example to similar tasks.
 
-Plain-language prompt: `别讲岗位名称，来了以后每天具体做什么？第一个月要交付什么？`
+Plain-language prompt: `这个人做到什么样，你会觉得招对了？`
 
-Translate the answer into a role workflow: inputs and constraints -> candidate decisions -> output -> quality/validation -> user, stakeholder, or operational effect. Adapt the stages; do not force a data, software, or research vocabulary onto another role.
+An answer that establishes comprehension, speed, quality, and transferability usually closes the intake. Do not continue into separate questions about tools, professional foundations, evidence standards, risks, or weights when those can be derived from the first four themes.
 
-### 5. Professional Foundation
+## Sufficiency Stop Rule
 
-- Which knowledge or reasoning must already exist on day one?
-- Which skills are teachable within the available onboarding period?
-- How much does formal education matter compared with demonstrated work?
+Stop asking and draft the profile as soon as these facts are usable:
 
-Plain-language prompt: `哪些东西不会就没法做？哪些可以来了再教？专业基础到底是硬门槛，还是只是加分？`
+- activation context and audience;
+- team/teaching environment;
+- operational hiring motive;
+- recurring work or first deliverables, supplied directly or by the JD/profile;
+- success criteria stated by the professional or strongly implied by the operating constraints.
 
-This answer determines whether the profile uses a blocking foundation gate, a high-priority ranking signal, or only a supporting signal. Never assume that statistical training, a degree, or a tool is universally important.
+From that point, derive professional foundations, evidence requirements, risk/counterevidence, and qualitative priorities. Mark the derivation as an inference and surface it in the draft for correction. Ask one additional question only when the missing answer would change a hard gate, select a different profile, or reverse a likely decision rule. Convenience, completeness, or curiosity is not enough reason to continue the interview.
 
-### 6. Evidence Standard
+## Optional Calibration After The Draft
 
-- What resume evidence proves the person has done the work?
-- What evidence is only exposure, participation, a keyword, a template reproduction, or a polished claim?
-- What is the smallest missing fact that would change the decision?
+After showing the first draft, the professional may provide anonymized, already-decided examples to adjust priorities or counterevidence. Store only the generalized pattern and decision reason. Do not copy names, resume text, screenshots, contact details, or private links.
 
-Require attributable actions, relevant constraints, decisions, quality or validation, and a usable result when the role needs them. Keep public, shared, template, and AI-assisted work neutral while limiting its discrimination when personal contribution is unclear.
-
-### 7. Risk And Counterevidence
-
-- Which risks matter: time to productivity, direction, retention, expectation mismatch, credibility, access, or verification cost?
-- What evidence would overturn each concern?
-- Which facts are unknown rather than negative?
-
-Plain-language prompt: `什么情况会让你不想继续？什么反证出现以后，你会改变判断？`
-
-Every negative rule must include a counterevidence boundary. Do not turn a school, industry, wording habit, gap, or one unusual choice into a standalone character or ability conclusion.
-
-### 8. Priority And Calibration
-
-Ask the professional to order, rather than immediately number, the signals:
-
-- blocking;
-- high priority;
-- supporting;
-- low discrimination;
-- neutral/context only.
-
-Only after recruiter-labeled decisions exist should a profile introduce numeric weights or thresholds. Until then, keep the module vector separate and explain which signal wins when evidence conflicts.
-
-### 9. Existing Decisions
-
-Ask for a few anonymized, already-decided examples if available. Store only the generalized pattern and why the professional accepted or rejected it. Do not copy names, resume text, screenshots, contact details, or private links.
+Only recruiter-labeled decisions may justify numeric weights or thresholds. Until then, use `blocking`, `high priority`, `supporting`, `low discrimination`, and `neutral/context only` while keeping the module vector separate.
 
 ## Derive The Profile
 

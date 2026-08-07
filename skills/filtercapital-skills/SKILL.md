@@ -33,7 +33,7 @@ Run the investigation in Codex. Treat the resume as an evidence trace, not a lis
 ## Choose A Mode
 
 - **Screening mode:** use the supplied resume source, select one matching profile when available, and run the modules in order to produce a candidate decision.
-- **Standards-authoring mode:** when a professional wants to create or revise screening criteria, read [Profile authoring](references/profile-authoring.md), conduct its bounded intake one question at a time, and produce a draft profile. Do not issue a candidate decision or persist a profile until the professional approves the generalized draft.
+- **Standards-authoring mode:** when a professional wants to create or revise screening criteria, read [Profile authoring](references/profile-authoring.md), reuse the JD and existing profile, and ask only for decision-changing missing facts. Apply its decisive shortcuts before every question; a small team hiring for routine capacity may need no further intake once the role's work is known. Infer the remaining standards and produce a draft profile. Do not issue a candidate decision or persist a profile until the professional approves the generalized draft.
 
 ## Run Modules In Order
 

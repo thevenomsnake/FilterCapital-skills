@@ -18,7 +18,7 @@ project_name: "FilterCapital-skills"
 
 ## Current State
 
-`FilterCapital-skills` 已模块化并改为来源、岗位中立。用户可以直接提供简历，也可以选择任意可访问网站；所有来源先经过输入安全预检，再依次调用通用调查与评分模块。专业用户也可以进入 standards-authoring mode，通过固定 intake 生成并确认自己的 profile。岗位和行业的专业基础、工作流与定性权重由 `profiles/` 独立提供，当前首个 profile 为游戏数据分析。外部调查只针对会改变判断的未知项；能力评分使用自动化基线，用可归因的候选人判断和验证决定能力深度。小公司实习生按即时产能招聘处理，并使用独立于应届生的推进阈值；最终以结论和决定性问题优先的方式直接报告，项目不包含 GUI。
+`FilterCapital-skills` 已模块化并改为来源、岗位中立。用户可以直接提供简历，也可以选择任意可访问网站；所有来源先经过输入安全预检，再依次调用通用调查与评分模块。专业用户也可以进入 standards-authoring mode，通过最小充分 intake 生成并确认自己的 profile；模型优先复用 JD、现有 profile 和已有回答，并在规则可推导时立即停止提问。岗位和行业的专业基础、工作流与定性权重由 `profiles/` 独立提供，当前首个 profile 为游戏数据分析。外部调查只针对会改变判断的未知项；能力评分使用自动化基线，用可归因的候选人判断和验证决定能力深度。小公司实习生按即时产能招聘处理，并使用独立于应届生的推进阈值；最终以结论和决定性问题优先的方式直接报告，项目不包含 GUI。
 
 ## Roles
 
@@ -45,8 +45,9 @@ project_name: "FilterCapital-skills"
 - [T017 建立岗位中立核心与条件分支](tickets/T017-role-neutral-core-and-conditional-lenses.md): completed, approved
 - [T018 拆分岗位行业 Profiles](tickets/T018-extract-role-industry-profiles.md): completed, approved
 - [T019 建立专业用户标准制作模式](tickets/T019-profile-authoring-workflow.md): completed, approved
+- [T020 按信息充分性停止标准访谈](tickets/T020-stop-authoring-at-sufficiency.md): completed, approved
 
 ## Decisions
 
 - **岗位中立核心，独立 Profiles：** 调查、归因、能力证据、路径和风险结构适用于任何岗位；专业基础、工作流、门槛和定性权重必须存放在独立 profile 中，由目标 JD 与招聘方上下文选择，不得写回通用模块或外推到其他岗位。
-- **标准制作先 intake、后持久化：** 专业用户用人话描述公司、团队、招聘动机、实际职责、带教能力和证据标准；技能将其映射到固定模块，先给出草案，获确认后才写入 profile。
+- **标准制作使用最小充分 intake：** 优先复用 JD、现有 profile 和已有回答。小公司、小团队、为日常工作补产能且岗位职责已知时，直接推导 fast-start、低错误和迁移能力要求并生成草案；只有缺口会改变硬门槛、profile 选择或结论时才继续提问，获确认后再写入 profile。
