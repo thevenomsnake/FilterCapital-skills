@@ -18,7 +18,7 @@ project_name: "FilterCapital-skills"
 
 ## Current State
 
-`FilterCapital-skills` 已模块化并改为来源中立。用户可以直接提供简历，也可以选择任意可访问网站；所有来源先经过输入安全预检，再依次调用调查与评分模块。外部调查只针对会改变判断的未知项，并按正式实体、来源线索或技术问题构造查询；能力评分使用自动化基线，剥离现代 AI 和标准工具可低成本完成的通用执行，要求可归因的候选人判断与验证；最终以结论和决定性问题优先的方式直接报告，项目不包含 GUI。
+`FilterCapital-skills` 已模块化并改为来源中立。用户可以直接提供简历，也可以选择任意可访问网站；所有来源先经过输入安全预检，再依次调用调查与评分模块。外部调查只针对会改变判断的未知项，并按正式实体、来源线索或技术问题构造查询；能力评分使用自动化基线，将通用执行保留为低区分度的流程与基础交付证据，并用可归因的候选人判断和验证决定能力深度；最终以结论和决定性问题优先的方式直接报告，项目不包含 GUI。
 
 ## Roles
 
@@ -36,6 +36,7 @@ project_name: "FilterCapital-skills"
 - [T008 明确直白、真实的评审定位](tickets/T008-direct-evidence-reporting.md): completed, approved
 - [T009 修正履历调查检索策略](tickets/T009-fix-research-query-strategy.md): completed, approved
 - [T010 按自动化基线识别候选人自身能力](tickets/T010-adjust-capability-for-ai-era.md): completed, approved
+- [T011 保留低区分度的流程能力证据](tickets/T011-retain-process-experience.md): completed, approved
 
 ## Decisions
 
