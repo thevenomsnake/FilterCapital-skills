@@ -62,17 +62,32 @@ Describe execution status without scoring it:
 - `delivered to a real user or stakeholder`;
 - `deployed and operated with feedback`.
 
-### Stage 5 - Research Context And Difficulty
+### Stage 5 - Research Material Unknowns
 
-For every substantive named project, perform at least one focused provenance or difficulty lookup unless reliable primary context is already available. Research work roles only when scope, access, or authority is material to the investigation.
+Start from each case sheet's **Missing proof**. Research only when public evidence could materially change a later judgment about capability, credibility, project difficulty, or retention. A candidate-authored project title alone does not justify a lookup.
 
-Use this search order:
+Before each search, write one falsifiable question, such as:
 
-1. exact project, program, competition, publication, or repository name;
-2. official or original source, dataset, documentation, or organizer page;
-3. distinctive resume phrase to detect common templates or copied project framing;
-4. technical documentation needed to judge method and validation burden;
-5. organization recruitment or role information needed to understand ordinary access and authority.
+- Does this work derive from a known dataset, tutorial, competition, paper, or repository?
+- What difficult steps did the source supply, and what remained for the candidate?
+- Could this role ordinarily access the claimed data or decision authority?
+- Does the claimed method support the stated conclusion and validation burden?
+
+Classify the target before constructing the query:
+
+1. **Canonical external entity:** For an official competition, publication, repository, dataset, certificate, or employer program, search its canonical name and prefer the organizer or original source.
+2. **Candidate-authored or generic title:** Treat the title as a label, not a searchable entity. Do not quote the complete title. Search only when provenance matters, using evidence-backed anchors such as the likely dataset, platform, schema, company or product, course or competition, plus two to four distinctive domain or method terms.
+3. **Internal company project:** Do not search the private project title. When role scope, access, or authority matters, research only public employer, product, recruiting, role, or technical context.
+4. **Method or plausibility question:** Search primary literature or official technical documentation for the specific method, data type, validation requirement, or claimed effect.
+
+Use one focused query per question. After an unsuccessful canonical-name lookup, allow at most one broader provenance query; if that also fails, record `unknown` and stop. Search absence is not negative evidence.
+
+Examples:
+
+- Bad: `"自行车门店经营分析与客户关系数据库" SQL`.
+- Better when table or field clues point to the public sample: `BikeStores sample database SQL customer orders schema`.
+- Better when no source clue exists: skip the web search and record the dataset origin as an interview question.
+- For a generic title such as `东北城市群低碳导向空间布局多目标优化研究`, search claimed anchors such as `东北城市群 碳排放 空间杜宾模型 多目标优化` only if provenance would change the assessment and those methods appear in the resume.
 
 Classify project context descriptively:
 
