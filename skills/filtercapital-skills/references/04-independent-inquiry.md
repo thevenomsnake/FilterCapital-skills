@@ -1,9 +1,9 @@
 # 04 - Add Independent Inquiry
 
-Treat independent analytical ability as a positive-only bonus. Award evidence when the candidate:
+Treat independent inquiry as a positive-only bonus across roles. Award evidence when the candidate:
 
 - discovers important problems beyond the assigned task;
-- questions metric definitions and default assumptions;
+- questions briefs, definitions, success criteria, metrics, or default assumptions relevant to the work;
 - proposes competing explanations and searches for counterevidence;
 - explains method assumptions, applicability, and limitations;
 - revises an earlier conclusion after contradictory evidence;

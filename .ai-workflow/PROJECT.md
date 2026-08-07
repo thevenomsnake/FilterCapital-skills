@@ -42,7 +42,8 @@ project_name: "FilterCapital-skills"
 - [T014 分离流程上手与分析基础门槛](tickets/T014-separate-foundation-from-fast-start.md): completed, approved
 - [T015 区分公开来源与个人项目归因](tickets/T015-separate-public-source-attribution.md): completed, approved
 - [T016 优先系统定量训练与具体项目链](tickets/T016-prioritize-quantitative-training-and-specific-projects.md): completed, approved
+- [T017 建立岗位中立核心与条件分支](tickets/T017-role-neutral-core-and-conditional-lenses.md): completed, approved
 
 ## Decisions
 
-None.
+- **岗位中立核心，条件化岗位镜头：** 调查、归因、能力证据、路径和风险结构适用于任何岗位；统计基础等岗位专属门槛只能由目标 JD 或招聘方明确激活，不得外推为全局规则。

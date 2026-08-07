@@ -45,15 +45,15 @@ Create one case sheet for every substantive project, research item, competition,
 Record:
 
 - **Problem:** What task or business question was supposedly solved?
-- **Origin:** Coursework, tutorial, virtual experience, public competition, assigned company work, self-initiated work, public repository, or unknown?
-- **Inputs:** Data source, acquisition burden, scale, cleanliness, labels, and access constraints.
-- **Candidate action:** Exact personal decisions, methods, code, analysis, coordination, or delivery claimed.
-- **Difficulty sources:** Ambiguity, data acquisition, cleaning, method selection, engineering, validation, domain knowledge, permissions, and stakeholder coordination.
-- **Execution coverage:** Which stages are evidenced: framing, acquisition, cleaning, analysis/modeling, validation, delivery, deployment, monitoring, iteration?
+- **Origin:** Coursework, tutorial, virtual experience, public competition, assigned work, self-initiated work, adaptation of pre-existing material, or unknown?
+- **Inputs and constraints:** Briefs, requirements, source material, data, tools, resources, dependencies, volume, quality, access, time, and other constraints relevant to the work.
+- **Candidate action:** Exact personal decisions, methods, production, analysis, craft, coordination, or delivery claimed.
+- **Difficulty sources:** Ambiguity, input acquisition or preparation, tradeoffs, craft or engineering, quality control, validation, domain knowledge, permissions, and stakeholder coordination.
+- **Execution coverage:** Which role-relevant stages are evidenced: framing, input acquisition, preparation, execution, quality or validation, delivery, operation or feedback, and iteration?
 - **Ownership:** Observer, participant, executor, primary owner, team lead, or unknown, based only on evidence.
-- **Artifacts:** Repository URL, owner or organization, branch/commit history, report, dashboard, model, publication, competition record, product, or other inspectable output. Record only what is available; never retain private credentials or session data.
-- **Public-source attribution:** Record the candidate's exact wording when a project is described as `from GitHub`, `on GitHub`, or by a repository URL, and separately record actual personal contribution. `from GitHub` may be an English preposition mistake intended to mean that the work is hosted on GitHub; treat it first as expression ambiguity, not as evidence of copying. Hosting/source disclosure, repository details, change scope, candidate-owned decisions, validation, and result changes are separate facts.
-- **Outcome:** Claimed result, baseline, metric definition, attribution, and whether the result is independently checkable.
+- **Artifacts:** Inspectable outputs, where they are published or stored, and any available version, revision, approval, or change history appropriate to that medium. Record only what is available; never retain private credentials or session data.
+- **Artifact provenance:** Keep four dimensions separate: where the output is presented or hosted; which source material, template, prior work, or shared input it depends on; what the candidate personally changed or decided; and how the result was validated or used. Mark a dimension `not applicable` when the medium has no such layer, and `unknown` only when it should exist but is undocumented. Ambiguous attribution wording establishes none of these by itself. Preserve the wording as a fact and do not infer copying, authorship, or independent ownership without evidence.
+- **Outcome:** Claimed result, success criterion or baseline, measurement, attribution, user or stakeholder effect, and whether the result is independently checkable.
 - **Missing proof:** The smallest missing fact that would materially change later evaluation.
 
 Describe execution status without scoring it:
@@ -61,47 +61,46 @@ Describe execution status without scoring it:
 - `mentioned only`;
 - `guided reproduction`;
 - `partial implementation`;
-- `completed analysis or prototype`;
+- `completed work sample or prototype`;
 - `delivered to a real user or stakeholder`;
 - `deployed and operated with feedback`.
 
 ### Stage 5 - Research Material Unknowns
 
-Start from each case sheet's **Missing proof**. Research only when public evidence could materially change a later judgment about capability, credibility, project difficulty, or retention. A candidate-authored project title alone does not justify a lookup.
+Start from each case sheet's **Missing proof**. Research only when public evidence could materially change a later judgment about capability, credibility, work difficulty, or retention. A candidate-authored work title alone does not justify a lookup.
 
 Before each search, write one falsifiable question, such as:
 
-- Does this work derive from a known dataset, tutorial, competition, paper, or repository?
+- Does this work derive from a known source, template, tutorial, competition, publication, repository, or prior work sample?
 - What difficult steps did the source supply, and what remained for the candidate?
-- Could this role ordinarily access the claimed data or decision authority?
+- Could this role ordinarily access the claimed inputs, resources, stakeholders, or decision authority?
 - Does the claimed method support the stated conclusion and validation burden?
 
 Classify the target before constructing the query:
 
 1. **Canonical external entity:** For an official competition, publication, repository, dataset, certificate, or employer program, search its canonical name and prefer the organizer or original source.
-2. **Candidate-authored or generic title:** Treat the title as a label, not a searchable entity. Do not quote the complete title. Search only when provenance matters, using evidence-backed anchors such as the likely dataset, platform, schema, company or product, course or competition, plus two to four distinctive domain or method terms.
-3. **Internal company project:** Do not search the private project title. When role scope, access, or authority matters, research only public employer, product, recruiting, role, or technical context.
+2. **Candidate-authored or generic title:** Treat the title as a label, not a searchable entity. Do not quote the complete title. Search only when provenance matters, using evidence-backed anchors such as the likely source, platform, program, artifact type, company or product, course or competition, plus two to four distinctive domain or method terms.
+3. **Internal work item:** Do not search the private work title. When role scope, access, or authority matters, research only public employer, product, recruiting, role, or technical context.
 4. **Method or plausibility question:** Search primary literature or official technical documentation for the specific method, data type, validation requirement, or claimed effect.
 
 Use one focused query per question. After an unsuccessful canonical-name lookup, allow at most one broader provenance query; if that also fails, record `unknown` and stop. Search absence is not negative evidence.
 
 Examples:
 
-- Bad: `"自行车门店经营分析与客户关系数据库" SQL`.
-- Better when table or field clues point to the public sample: `BikeStores sample database SQL customer orders schema`.
-- Better when no source clue exists: skip the web search and record the dataset origin as an interview question.
-- For a generic title such as `东北城市群低碳导向空间布局多目标优化研究`, search claimed anchors such as `东北城市群 碳排放 空间杜宾模型 多目标优化` only if provenance would change the assessment and those methods appear in the resume.
+- Bad: quote the complete candidate-authored title and append one broad role keyword.
+- Better: query a likely canonical source, platform, program, dataset, template family, or artifact type plus two to four distinctive facts actually present in the resume.
+- When no provenance anchor exists, skip the search and record origin and ownership as interview questions.
 
-Classify project context descriptively:
+Classify work context descriptively:
 
 - `template/tutorial reproduction`;
 - `guided standard project`;
 - `independent adaptation of public material`;
-- `independently framed analysis`;
+- `independently framed work`;
 - `original or production delivery`;
 - `unknown`.
 
-Do not confuse algorithm sophistication with project difficulty. A simple method on messy, self-acquired data with real validation may be harder than a complex model copied from a complete notebook.
+Do not confuse technique sophistication with work difficulty. A simple method applied to messy, self-acquired inputs with real constraints and validation may be harder than an advanced technique supplied by a complete example.
 
 ### Stage 6 - Audit Execution Plausibility
 
@@ -109,13 +108,13 @@ Compare the case sheet with external context:
 
 - Which difficult steps were supplied by the source and which did the candidate perform?
 - Does the stated duration support the claimed breadth?
-- Could someone at that role level obtain the required data and decision authority?
+- Could someone at that role level obtain the required inputs, resources, stakeholder access, and decision authority?
 - Does the method support the claimed conclusion?
 - Is validation appropriate for the problem?
 - Is the result personal, team-level, department-level, or unclear?
 - Does an artifact or operational feedback prove completion beyond a resume sentence?
 
-When a project says `from GitHub` but gives no repository, change scope, personal decision, validation, or changed result, preserve two separate findings: the wording is ambiguous and contribution is unverified. Do not call the project copied or fraudulent. Until clarified, classify only the evidence actually shown (usually `guided reproduction` or `commodity workflow` at most) and add one focused interview question: was the project hosted on GitHub or sourced from GitHub, and what repository, commits, personal changes, validation, and result change can the candidate show?
+When an attribution statement conflates presentation location, source material, and authorship, preserve two findings: the wording is ambiguous and contribution is unverified. Do not call the work copied or fraudulent. Until clarified, classify only the execution and ownership actually shown, normally no higher than `guided reproduction` or a commodity workflow when personal contribution is missing. Ask one focused question: what existed before the candidate started, where is the final output presented, what did the candidate personally change or decide, how was it validated, and what changed because of it?
 
 Preserve mismatches as anomalies. Do not label them false without evidence.
 
@@ -129,7 +128,7 @@ Look across the full fact map for:
 - institution names standing in for personal evidence;
 - repeated authority-impact mismatches;
 - repeated project templates or unusually uniform wording;
-- public-source/hosting wording that does not line up with repository, ownership, or contribution evidence;
+- attribution statements that do not line up with source, ownership, revision, validation, or outcome evidence;
 - education re-entry gaps and whether documented accumulation exists during them;
 - anomalies relative to candidates for the same role.
 
@@ -154,7 +153,7 @@ Do not decide which story is true merely to make the investigation feel complete
 - Separate what a source proves from what it merely makes plausible.
 - Treat search absence as unknown, never as evidence that a claim is false.
 - Treat access difficulty as context, never as proof of personal connections.
-- Treat a common project as context; investigate what the candidate changed before judging originality.
+- Treat a common work sample as context; investigate what the candidate changed before judging originality.
 - Seek disconfirming evidence for every suspicious explanation.
 - Preserve source conflicts and lower confidence.
 - Stop when more searching will not change a case sheet or competing story.
