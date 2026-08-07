@@ -24,7 +24,7 @@ role: project-lead
 
 ## Reads First
 
-- `skills/investigate-resumes/SKILL.md`
+- `skills/filtercapital-skills/SKILL.md`
 
 ## Completion Check
 
@@ -34,5 +34,5 @@ role: project-lead
 
 - Behavior: 已将统计基础、方向一致性和稳定性组合风险写入本地技能，并保留可推翻稳定性风险的反证。
 - Evidence: `quick_validate.py` 输出 `Skill is valid!`。
-- Commit or artifact: `skills/investigate-resumes/SKILL.md`
+- Commit or artifact: `skills/filtercapital-skills/SKILL.md`
 - Blocker: none

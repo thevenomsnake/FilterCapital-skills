@@ -36,5 +36,5 @@ role: project-lead
 
 - Behavior: 已建立共同公平边界、四级证据、LLM 评审流程，以及实习生与应届生两套判断逻辑；当前看板已标记实习生规则 v1.0。
 - Evidence: 本地知识已迁移为项目技能并纳入 smoke。
-- Commit or artifact: `skills/investigate-resumes/SKILL.md`
+- Commit or artifact: `skills/filtercapital-skills/SKILL.md`
 - Blocker: none

@@ -1,6 +1,6 @@
-# 简历侦探
+# FilterCapital-skills
 
-在 Codex 中调用 `$investigate-resumes`，提供岗位要求，并任选一种简历来源：
+在 Codex 中调用 `$filtercapital-skills`，提供岗位要求，并任选一种简历来源：
 
 - 直接粘贴简历文本或附加简历文件；
 - 提供公开可访问的简历 URL；

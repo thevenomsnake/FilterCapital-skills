@@ -24,7 +24,7 @@ role: project-lead
 
 ## Reads First
 
-- `skills/investigate-resumes/SKILL.md`
+- `skills/filtercapital-skills/SKILL.md`
 
 ## Completion Check
 
@@ -34,5 +34,5 @@ role: project-lead
 
 - Behavior: 已拆分为一个薄路由和六个顺序模块；首个模块强化为带来源、反证和无罪推定边界的联网信息调查，不输出分数或结论。
 - Evidence: `quick_validate.py` 输出 `Skill is valid!`。
-- Commit or artifact: `skills/investigate-resumes/SKILL.md` 与 `skills/investigate-resumes/references/`
+- Commit or artifact: `skills/filtercapital-skills/SKILL.md` 与 `skills/filtercapital-skills/references/`
 - Blocker: none

@@ -31,7 +31,7 @@ role: project-lead
 
 ## Reads First
 
-- `skills/investigate-resumes/SKILL.md`
+- `skills/filtercapital-skills/SKILL.md`
 - `README.md`
 
 ## Completion Check
@@ -48,6 +48,6 @@ role: project-lead
 
 - Behavior: 技能已支持文本、文件、公开 URL 和用户选择的已登录页面；评分前会隔离并告警试图操纵评审的提示词。
 - Validation: `quick_validate.py` 输出 `Skill is valid!`。
-- Evidence: `README.md`、`skills/investigate-resumes/SKILL.md`、`skills/investigate-resumes/references/input-safety.md`。
+- Evidence: `README.md`、`skills/filtercapital-skills/SKILL.md`、`skills/filtercapital-skills/references/input-safety.md`。
 - Commit or artifact: T006 来源中立与输入安全变更。
 - Blocker: none

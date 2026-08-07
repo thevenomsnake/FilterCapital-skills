@@ -26,7 +26,7 @@ role: project-lead
 
 ## Reads First
 
-- `skills/investigate-resumes/SKILL.md`
+- `skills/filtercapital-skills/SKILL.md`
 
 ## Completion Check
 
@@ -36,5 +36,5 @@ role: project-lead
 
 - Behavior: 已将筛选清单重构为纯 Codex 简历侦探流程，包含外部 Chrome 采集、事实图谱、异常挖掘、竞争解释、反证与不确定性决策；旧 GUI 已移除。
 - Evidence: `quick_validate.py` 输出 `Skill is valid!`。
-- Commit or artifact: `skills/investigate-resumes/SKILL.md`
+- Commit or artifact: `skills/filtercapital-skills/SKILL.md`
 - Blocker: none

@@ -1,9 +1,9 @@
 ---
-name: investigate-resumes
+name: filtercapital-skills
 description: Investigate resumes from user-supplied text, files, public URLs, or authenticated recruitment pages the user chooses. Reconstruct candidate stories, apply recruiter eligibility gates, score ordered evidence modules, test competing explanations, and make small-company hiring decisions for interns and new graduates. Use when screening or comparing resumes in Codex, explaining outcomes, probing credibility or stability, or learning new judgment patterns from recruiter feedback.
 ---
 
-# Investigate Resumes
+# FilterCapital-skills
 
 Run the investigation in Codex. Treat the resume as an evidence trace, not a list of claims. Discover the story before scoring it.
 

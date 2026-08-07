@@ -2,10 +2,10 @@
 schema_version: 2
 workflow_version: 0.6.0
 status: active
-project_name: "简历评审台"
+project_name: "FilterCapital-skills"
 ---
 
-# 简历评审台
+# FilterCapital-skills
 
 ## Product Direction
 
@@ -17,7 +17,7 @@ project_name: "简历评审台"
 
 ## Current State
 
-纯 Codex 简历侦探技能已模块化并改为来源中立。用户可以直接提供简历，也可以选择任意可访问网站；所有来源先经过输入安全预检，再依次调用事实与联网调查、核心能力、方向路径、独立挖掘加分、中小公司风险和最终决策，项目不包含 GUI。
+`FilterCapital-skills` 已模块化并改为来源中立。用户可以直接提供简历，也可以选择任意可访问网站；所有来源先经过输入安全预检，再依次调用事实与联网调查、核心能力、方向路径、独立挖掘加分、中小公司风险和最终决策，项目不包含 GUI。
 
 ## Roles
 
@@ -31,6 +31,7 @@ project_name: "简历评审台"
 - [T004 重构简历侦探流程](tickets/T004-investigate-resumes.md): completed, approved
 - [T005 拆分调查评分模块](tickets/T005-modularize-investigation.md): completed, approved
 - [T006 支持用户选择简历来源](tickets/T006-source-neutral-inputs.md): completed, approved
+- [T007 统一为 FilterCapital-skills](tickets/T007-rename-filtercapital-skills.md): completed, approved
 
 ## Decisions
 
