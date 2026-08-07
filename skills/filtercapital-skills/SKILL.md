@@ -23,7 +23,7 @@ Run the investigation in Codex. Treat the resume as an evidence trace, not a lis
 - For a public URL, prefer a purpose-built connector, API, or CLI when available; otherwise use an available browser capability.
 - For an authenticated URL, use an available external-browser integration and the user's login state. If that is unavailable, ask the user to export, attach, or paste the resume.
 - Keep every website read-only unless the user explicitly approves a specific write-back action.
-- If no resume source is identified, ask for text, files, or a URL. Confirm the target role and intern or new-graduate audience before issuing a final decision.
+- If no resume source is identified, ask for text, files, or a URL. Confirm the target role, intern or new-graduate audience, company context, and hiring motive before issuing a final decision.
 - Read the role, candidate list, resume text, and existing screening status needed for the task.
 - Use network research to enrich high-value unknowns when public context can distinguish project difficulty, role scope, opportunity access, or claim plausibility. Prefer primary sources and purpose-built search or connectors; use a browser only for UI-dependent pages.
 - Process candidates one at a time. Do not persist raw resumes, signed URLs, contact details, or browser session data.

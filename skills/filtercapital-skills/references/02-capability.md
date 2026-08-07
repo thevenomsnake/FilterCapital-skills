@@ -30,7 +30,7 @@ Execution coverage is not evidence depth. For example, a public review-data proj
 
 ### Intern
 
-Accept coursework, personal projects, competitions, clubs, research, and internships. Judge foundations and capacity to learn. Do not penalize missing formal work or production experience.
+For a small-company intern hired as near-term capacity, apply the fast-start gate first. After it passes, prioritize directly transferable workflow experience; use analytical judgment and learning capacity to rank candidates rather than to replace process readiness. Accept coursework, personal projects, competitions, clubs, research, and internships when they demonstrate concrete execution. Do not require formal work or production impact.
 
 ### New Graduate
 

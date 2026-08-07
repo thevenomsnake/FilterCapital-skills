@@ -39,7 +39,10 @@ Treat this as a satisfaction and retention forecast, not a penalty for ambition 
 
 ## Fast-Start Requirement
 
-Require evidence that the candidate can become useful with little onboarding. Prefer at least one attributable loop covering a concrete problem, data handling, personal decisions, validation, and delivery or operational use.
+Apply the audience-specific standard:
+
+- **Intern:** Let the eligibility module own fast-start pass or fail. After a pass, evaluate how closely the demonstrated workflow matches the daily work and how much verification or onboarding remains. Commodity execution is positive evidence of immediate usefulness; do not require a full analytical result loop.
+- **New graduate:** Require at least one attributable loop covering a concrete problem, data handling, personal decisions, validation, and delivery or operational use.
 
 Do not treat the following as fast-start proof by themselves:
 
