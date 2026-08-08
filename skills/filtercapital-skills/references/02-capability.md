@@ -15,6 +15,8 @@ When that residue is unclear, ask: `What was one decision the tools could not ma
 
 Treat AI use itself as neutral. This baseline measures how discriminating the evidence is; it does not imply that the candidate used AI. Verified decomposition, error detection, and accountable use of AI may themselves support candidate-owned judgment.
 
+Do not infer weaker thinking from age, graduation cohort, or long-term access to AI. Apply the same automation baseline to every candidate and judge only attributable framing, decisions, verification, correction, and transfer to changed conditions.
+
 Cap a work sample at Level 2 when public or prepared inputs and routine deliverables make it reproducible from a short prompt or template, unless the resume shows candidate-owned judgment, a material real-world constraint, or feedback that changed the work. Count a long tool list, many workflow stages, and repeated routine checks once rather than as independent evidence. A simple work sample may still be strong when its reasoning and validation are deep.
 
 ### Artifact Provenance And Ownership
@@ -63,4 +65,4 @@ When no profile matches and the recruiter has not explicitly confirmed a foundat
 - `4`: One credible result loop linking a nontrivial problem, candidate-owned judgment, appropriate validation, and an outcome tested against evidence, users, or operational feedback.
 - `5`: Multiple independent result loops plus evidence of sound method selection, validation, and revision under real constraints.
 
-Return: `score 0-5`, `applicable foundation gate or not applicable`, automation baseline, candidate-owned judgment, strongest evidence, missing evidence, highest-value capability question, and confidence. Keep the fast-start gate result separate from any foundation result.
+Return: `score 0-5`, `applicable foundation gate or not applicable`, automation baseline, candidate-owned judgment, strongest evidence, missing evidence, the capability uncertainty most worth verifying, and confidence. Keep the fast-start gate result separate from any foundation result. Supply a verification target to the decision module; do not treat it as an additional final interview question.

@@ -35,6 +35,22 @@ Then apply one confirmed audience/company branch. If the source does not establi
 
 These are provisional operating thresholds. Do not create weighted totals until enough recruiter-labeled cases exist to calibrate them.
 
+## Single Highest-Information-Gain Question
+
+Make a tentative decision first, then treat every module and profile verification prompt as an internal candidate probe. Output only the one question whose answer has the greatest realistic chance of changing the decision, confidence, or ordering among candidates.
+
+Build it from a specific resume claim or omission and the smallest decisive uncertainty. Prefer a narrow question that distinguishes competing explanations over a generic walkthrough. Require observable detail appropriate to the work, such as the starting state, the candidate's own decision, a rejected alternative, an error or conflicting result, the verification used, and what changed afterward. Do not ask all of these mechanically; include only the parts that resolve the selected uncertainty.
+
+For polished, template-friendly, public, or AI-assistable work, do not ask whether AI was used as a proxy for ability. Ask what judgment remained with the candidate, how they detected or prevented a wrong result, and whether they can adapt the work when a material condition changes. AI use is neutral; attributable control of the result is the evidence.
+
+Choose the target by decision state:
+
+- `advance`: test the strongest claim whose ownership or reliability could materially change ranking or expose a costly false positive;
+- `review` or `insufficient information`: test the missing fact most likely to move the candidate to advance or decline;
+- `decline`: ask only when realistic counterevidence could overturn the decisive reason. Otherwise return `none - no unresolved job-relevant fact would change the decision` instead of inventing an interview question.
+
+After the question, state in one short line what answer would overturn the current interpretation and what answer would confirm it. Do not expose other module-level question candidates.
+
 ## Codex Output
 
 Return:
@@ -46,7 +62,7 @@ Return:
 5. fact map;
 6. anomalies and competing stories with material counterevidence;
 7. score vector and gate outcomes;
-8. the single highest-value verification question.
+8. the single highest-information-gain verification question, or the explicit `none` result above, followed by its decision-change test.
 
 State the decision immediately after the safety warning. Do not bury a hard failure or material risk below background detail, and do not replace a clear negative conclusion with euphemisms such as `可能不是最优选择` when the evidence supports `decline`.
 

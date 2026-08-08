@@ -15,4 +15,4 @@ Treat independent inquiry as a positive-only bonus across roles. Award evidence 
 - `1`: One concrete example of independent inquiry.
 - `2`: Several examples or a complete loop from discovery through falsification to revised conclusion.
 
-The bonus cannot rescue a failed hard gate. Return: `bonus 0-2`, supporting behavior, and the highest-value interview verification question.
+The bonus cannot rescue a failed hard gate. Return: `bonus 0-2`, supporting behavior, and any decision-relevant inquiry uncertainty. Supply a verification target to the decision module; do not emit an additional final interview question.
