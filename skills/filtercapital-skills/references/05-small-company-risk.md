@@ -81,4 +81,4 @@ Score higher for lower company risk:
 - `4`: Low risk with a credible role and company choice.
 - `5`: Strong evidence of realistic expectations, self-reliance, and durable fit.
 
-Return: `score 0-5` or `not applicable`, risk branches, counterevidence, branch convergence, and confidence.
+Return: `score 0-5` or `not applicable`, risk branches, counterevidence, branch convergence, at most one decision-changing fit uncertainty with overturning and confirming evidence, and confidence.

@@ -1,6 +1,6 @@
 ---
 profile: game-data-analysis
-version: 1
+version: 2
 origin: approved-standard-intake
 ---
 
@@ -79,9 +79,11 @@ Public or AI-assisted practice can pass fast start when execution is concrete, b
 
 Raise expectation-gap risk only when several facts coexist: the candidate explicitly targets model-centered research or a substantially different specialty, the role is primarily recurring product/operational analysis, and the resume gives no evidence of comfort with routine definitions, quality work, monitoring, and decision support. Ambition or academic success alone is not a penalty. Sustained work in the actual workflow and a credible reason to choose it are counterevidence.
 
-## Highest-Value Verification
+## Verification Lens
 
-Ask for one project and require the candidate to explain the original inputs or labels, cleaning rules, metric definitions, method choice, validation, and the result that changed a recommendation. Accept sanitized or abstracted evidence when the underlying data is confidential.
+Do not use one fixed project walkthrough for every candidate. At screening time, prioritize the unresolved fact that could change the data-analysis foundation gate, small-company fast-start gate, or ordering within the passing pool.
+
+When the strongest evidence is a public, prepared, template-friendly, or AI-assistable project, anchor the question in that project and test its weakest decisive link: a candidate-owned definition or method choice, a real cleaning or quality failure, validation against leakage or a misleading result, or adaptation when one input or business condition changed. Select only one link. When ownership, trajectory, or retention is more decision-relevant, let the corresponding generic module supply the target instead. Accept sanitized or abstracted evidence when underlying data is confidential.
 
 ## Boundaries
 

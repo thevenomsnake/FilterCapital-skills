@@ -46,7 +46,7 @@ Treat this as an operating-cost gate, not evidence about intelligence, role capa
 
 Return the gate result, supporting fact, classification confidence, and action:
 
-- `fail`: decline immediately and skip the expensive investigation modules;
+- `fail`: decline immediately and skip the expensive investigation modules; set final verification to `none - no unresolved job-relevant fact would change the confirmed gate failure`;
 - `pass`: continue to investigation;
-- `uncertain`: perform only the smallest lookup needed to resolve the gate, then continue if it remains unresolved;
+- `uncertain`: perform only the smallest lookup needed to resolve the gate; if it remains unresolved, pass the exact missing gate fact forward as a verification lead;
 - `not applicable`: skip this gate and use only the confirmed gates for the selected context.

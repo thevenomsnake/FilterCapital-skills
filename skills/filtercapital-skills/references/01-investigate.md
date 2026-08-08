@@ -48,6 +48,8 @@ Record:
 - **Origin:** Coursework, tutorial, virtual experience, public competition, assigned work, self-initiated work, adaptation of pre-existing material, or unknown?
 - **Inputs and constraints:** Briefs, requirements, source material, data, tools, resources, dependencies, volume, quality, access, time, and other constraints relevant to the work.
 - **Candidate action:** Exact personal decisions, methods, production, analysis, craft, coordination, or delivery claimed.
+- **Reasoning and control:** Claimed problem framing, alternatives considered, decisions not supplied by instructions or tools, errors or conflicting evidence found, checks performed, corrections made, and responsibility for the result. Record missing detail as unknown; do not infer AI use.
+- **Transfer evidence:** A documented occasion when inputs, constraints, definitions, or requirements changed and the candidate adapted the work, or `unknown` when no such occasion is described.
 - **Difficulty sources:** Ambiguity, input acquisition or preparation, tradeoffs, craft or engineering, quality control, validation, domain knowledge, permissions, and stakeholder coordination.
 - **Execution coverage:** Which role-relevant stages are evidenced: framing, input acquisition, preparation, execution, quality or validation, delivery, operation or feedback, and iteration?
 - **Ownership:** Observer, participant, executor, primary owner, team lead, or unknown, based only on evidence.
@@ -89,7 +91,7 @@ Examples:
 
 - Bad: quote the complete candidate-authored title and append one broad role keyword.
 - Better: query a likely canonical source, platform, program, dataset, template family, or artifact type plus two to four distinctive facts actually present in the resume.
-- When no provenance anchor exists, skip the search and record origin and ownership as interview questions.
+- When no provenance anchor exists, skip the search and record origin and ownership as verification leads.
 
 Classify work context descriptively:
 
@@ -114,7 +116,7 @@ Compare the case sheet with external context:
 - Is the result personal, team-level, department-level, or unclear?
 - Does an artifact or operational feedback prove completion beyond a resume sentence?
 
-When an attribution statement conflates presentation location, source material, and authorship, preserve two findings: the wording is ambiguous and contribution is unverified. Do not call the work copied or fraudulent. Until clarified, classify only the execution and ownership actually shown, normally no higher than `guided reproduction` or a commodity workflow when personal contribution is missing. Ask one focused question: what existed before the candidate started, where is the final output presented, what did the candidate personally change or decide, how was it validated, and what changed because of it?
+When an attribution statement conflates presentation location, source material, and authorship, preserve two findings: the wording is ambiguous and contribution is unverified. Do not call the work copied or fraudulent. Until clarified, classify only the execution and ownership actually shown, normally no higher than `guided reproduction` or a commodity workflow when personal contribution is missing. Record a verification lead covering the smallest unresolved distinction among starting material, presentation location, personal change, validation, and changed result. Do not turn the entire list into an interview question.
 
 Preserve mismatches as anomalies. Do not label them false without evidence.
 
@@ -166,7 +168,7 @@ Return only:
 2. project and role case sheets;
 3. sourced external context with confidence;
 4. execution-status and difficulty classifications;
-5. source, ownership, and attribution ambiguities with the smallest verification question;
+5. source, ownership, reasoning-control, transfer, and attribution ambiguities with the smallest verification lead;
 6. cross-entry anomalies;
 7. competing stories with supporting and contradicting evidence;
 8. unknowns, counterevidence, and research limits.

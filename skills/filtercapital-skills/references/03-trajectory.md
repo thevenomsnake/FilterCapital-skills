@@ -41,4 +41,4 @@ Once the fast-start gate has failed, do not use trajectory to repeat that reject
 - `4`: Clear recent convergence with increasing depth.
 - `5`: Sustained, deliberate progression toward the role across several choices.
 
-Return: `score 0-5`, reconstructed choice path, convergence evidence, contradictions, and confidence.
+Return: `score 0-5`, reconstructed choice path, convergence evidence, contradictions, at most one decision-changing trajectory uncertainty with overturning and confirming evidence, and confidence.

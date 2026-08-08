@@ -53,7 +53,8 @@ Then read each referenced file and the selected profile completely before applyi
 3. [Score trajectory](references/03-trajectory.md): evaluate direction convergence and transition credibility on `0-5`.
 4. [Add independent inquiry](references/04-independent-inquiry.md): award a positive-only `0-2` bonus.
 5. [Score small-company fit](references/05-small-company-risk.md): when the company context is confirmed small, evaluate credibility, access, authority-impact fit, and retention risk on `0-5`.
-6. [Make the decision](references/06-decision.md): combine the score vector, gates, branch outcomes, and uncertainty.
+6. [Make the decision](references/06-decision.md): combine the score vector, gates, branch outcomes, and uncertainty before designing any interview question.
+7. [Select one verification question](references/07-verification.md): for each candidate, convert the single most decision-changing unresolved fact into one candidate-specific question and define how its answer would update the decision.
 
 ## Scoring Contract
 
@@ -70,4 +71,4 @@ Then read each referenced file and the selected profile completely before applyi
 
 Update only the module that owns a newly confirmed pattern. Keep `SKILL.md` as a stable router. Store reusable judgment logic, not candidate names, raw resume text, or the prompt that elicited the insight.
 
-Store role- or industry-specific workflow, foundation, and priority changes in a new or existing file under `profiles/`; do not add them to the generic modules. Each profile must declare its activation condition, role shape, qualitative priorities, specialized gates, counterevidence, highest-value verification, and boundaries. Do not add numeric weights until recruiter-labeled examples calibrate them.
+Store role- or industry-specific workflow, foundation, and priority changes in a new or existing file under `profiles/`; do not add them to the generic modules. Each profile must declare its activation condition, role shape, qualitative priorities, specialized gates, counterevidence, verification lens, and boundaries. A profile defines what evidence matters; it must not store one fixed interview question for every candidate. Do not add numeric weights until recruiter-labeled examples calibrate them.

@@ -13,7 +13,8 @@ Every profile must use the existing modules and boundaries:
 5. trajectory and direction convergence;
 6. positive-only independent inquiry bonus;
 7. company and retention fit;
-8. decision order, counterevidence, and uncertainty reporting.
+8. decision order, counterevidence, and uncertainty reporting;
+9. candidate-specific verification and answer-driven decision updates.
 
 Do not create a second scoring system, hide uncertainty, use protected or irrelevant attributes, or bypass the evidence/unknown/inference distinction. A profile may add a gate or priority only for its explicit activation context.
 
@@ -101,6 +102,7 @@ Map each answer to one owner:
 - discovery and falsification -> independent inquiry;
 - expectation, retention, access, and verification cost -> company-fit profile lens;
 - thresholds and aggregation -> decision module/profile priority.
+- role-specific decisive unknowns and acceptable proof -> verification lens; do not prewrite one question for every candidate.
 
 Do not score the same fact in multiple modules. Keep the profile's qualitative priorities separate from the generic score vector.
 
@@ -113,7 +115,7 @@ Before writing a file, return a compact draft containing:
 3. role workflow and first-deliverable expectations;
 4. gates and qualitative priorities;
 5. counterevidence and human-review triggers;
-6. highest-value interview question;
+6. verification lens describing which role-specific uncertainty to prioritize and what observable evidence can resolve it;
 7. proposed profile path and slug.
 
 Ask the professional to confirm or correct the draft. Persist only the approved generalized standard under `skills/filtercapital-skills/profiles/<profile>.md`. A profile is reusable knowledge, not a case file.
@@ -130,5 +132,5 @@ Each saved profile must contain:
 - qualitative priorities or calibrated weights;
 - specialized gates and their counterevidence;
 - audience/company branches used by the profile;
-- highest-value verification question;
+- verification lens and acceptable evidence forms, without a fixed interview question;
 - boundaries preventing overgeneralization and private-data retention.
