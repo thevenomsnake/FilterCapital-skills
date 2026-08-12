@@ -23,6 +23,8 @@ Record the target role, intern or new-graduate audience, available JD, company c
 
 Read the complete resume once before interpreting it. Extract every substantive education, work, research, competition, and project entry. Preserve the candidate's wording for claimed responsibility and impact, but label it as a claim rather than verified fact.
 
+For each education entry, record what the available source actually establishes about admission or selection, program duration, curriculum and course rigor, training density, assessed work, and attributable outputs. A country, institution, degree, faculty, or major name establishes identity only, not training quality. Mark missing dimensions `unknown`.
+
 ### Stage 3 - Normalize The Timeline
 
 Sort all entries by month. For each entry record:
@@ -36,7 +38,9 @@ Sort all entries by month. For each entry record:
 
 Calculate the elapsed calendar-month difference between every adjacent education node. If only years are available, record the interval as approximate. For a degree-completion month followed by a later enrollment month, explicitly record an **education re-entry gap** with its month count and whether work, internship, project, research, skill output, or another verifiable activity is documented during it. When the interval is about 12 months or longer and no such activity is listed, label the fact `unexplained education re-entry gap`; do not supply a cause.
 
-Flag other gaps, overlaps, short stays, unexplained transitions, and post-graduation work labeled as an internship. A gap or overlap is neutral until other evidence gives it meaning; the education re-entry label is a precise fact for the trajectory module, not a hiring conclusion.
+Also build a continuous activity timeline across education, employment, internships, research, dated projects, and other substantive outputs. When a candidate completed a degree and then entered verifiable post-graduation employment or a sustained work-like engagement, locate the last qualifying activity before every later enrollment. Qualifying activity means actual work or a comparable sustained role-related output; a brief or undated exercise does not reset the boundary. If about 18 months or more remain between that activity's end and enrollment with no dated actual work or comparable sustained role-related output, label the fact `unexplained post-work re-entry inactivity gap`, record the month count and both boundary events, and mark date precision. Earlier post-graduation work does not fill this later interval. Undated claims, skill keywords, and ordinary course enrollment do not prove continuous activity.
+
+Flag other gaps, overlaps, short stays, unexplained transitions, and post-graduation work labeled as an internship. A gap or overlap is neutral until other evidence gives it meaning; both re-entry labels are precise facts for the trajectory module, not hiring conclusions.
 
 ### Stage 4 - Create A Case Sheet For Every Project Or Role
 
@@ -58,6 +62,8 @@ Record:
 - **Outcome:** Claimed result, success criterion or baseline, measurement, attribution, user or stakeholder effect, and whether the result is independently checkable.
 - **Missing proof:** The smallest missing fact that would materially change later evaluation.
 
+Attribute evidence from the actual inputs, actions, decisions, outputs, and checks. Treat majors, departments, employer units, project names, and job titles as labels only. Words associated with the target role do not establish that work, and a label mismatch does not erase transferable fragments that the described duties do prove.
+
 Describe execution status without scoring it:
 
 - `mentioned only`;
@@ -70,6 +76,8 @@ Describe execution status without scoring it:
 ### Stage 5 - Research Material Unknowns
 
 Start from each case sheet's **Missing proof**. Research only when public evidence could materially change a later judgment about capability, credibility, work difficulty, or retention. A candidate-authored work title alone does not justify a lookup.
+
+When education or training quality could decide an activated foundation gate, allow one focused lookup of the exact program and cohort using official admissions, curriculum, duration, assessment, or accreditation material. Record only what the source proves for that program; institution-wide reputation, country, and degree naming cannot fill missing program evidence. If official detail remains unavailable, keep it `unknown` and stop.
 
 Before each search, write one falsifiable question, such as:
 
@@ -132,6 +140,7 @@ Look across the full fact map for:
 - repeated project templates or unusually uniform wording;
 - attribution statements that do not line up with source, ownership, revision, validation, or outcome evidence;
 - education re-entry gaps and whether documented accumulation exists during them;
+- post-work re-entry inactivity gaps and whether dated substantive activity fills the exact interval;
 - anomalies relative to candidates for the same role.
 
 Use geography only to understand opportunity provenance, never to penalize a region or hometown. Prefer combinations of weak signals over one impressive or suspicious detail.

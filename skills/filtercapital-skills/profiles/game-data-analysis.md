@@ -1,6 +1,6 @@
 ---
 profile: game-data-analysis
-version: 2
+version: 3
 origin: approved-standard-intake
 ---
 
@@ -26,11 +26,11 @@ This profile is the approved output of the generic standards-authoring intake. I
 
 | Intake signal | Derived profile rule |
 | --- | --- |
-| Limited teaching capacity and immediate capacity motive | Activate the small-company intern fast-start gate when context matches. |
+| Limited teaching capacity and immediate capacity motive | Activate the generic small-company intern foundation-and-transfer gate when context matches. |
 | Role requires repeatable quantitative reasoning | Make the data-analysis foundation gate blocking for this profile. |
-| Daily work spans inputs, preparation, definitions, recurring output, and checks | Use the role workflow as the direct-transfer evidence standard. |
+| Daily work spans inputs, preparation, definitions, recurring output, and checks | Use these stages to identify transferable foundations and project evidence; prior production coverage is additive, not required. |
 | Adjacent exposure is easier to obtain than end-to-end ownership | Treat platform metrics, content changes, ordinary questionnaires, and tool keywords as low-discrimination unless the full workflow is attributable. |
-| Public practice can demonstrate process familiarity but not deep judgment | Let it support fast start while keeping the automation baseline and foundation gate separate. |
+| Public practice can demonstrate foundation and transfer speed but not necessarily deep judgment | Let it support the generic gate while keeping the automation baseline and specialized foundation gate separate. |
 | No formal internship is required if personal work is concrete | Keep missing formal internship neutral and rank by attributable work and reasoning. |
 
 ## Role Shape
@@ -49,31 +49,31 @@ Adapt this sequence to the actual JD. Do not require monetization, retention, ex
 
 Do not calculate a weighted total. Use these priority tiers to order evidence and decide which missing proof matters most:
 
-- **Blocking when activated:** the data-analysis foundation gate for this specialized profile; the small-company intern fast-start gate when that audience and company context are confirmed. If the JD does not require statistical reasoning, select or create a different profile instead of weakening this one silently.
+- **Blocking when activated:** the data-analysis foundation gate for this specialized profile; the small-company intern foundation-and-transfer gate when that audience and company context are confirmed. If the JD does not require statistical reasoning, select or create a different profile instead of weakening this one silently.
 - **High:** repeated, attributable work across the role's workflow; explicit metric or label definitions; method selection; validation, correction, and a decision or operational result.
-- **Supporting:** a complete project chain that identifies the data object or labels, method, output, and business use, even when the inputs are public or prepared. It can support process readiness but remains bounded by the automation baseline.
-- **Low:** tool names, exposure to platform metrics, changing content based on observed numbers, ordinary questionnaires or user portraits without a data-processing chain, generic descriptive statistics, and advanced model names without personal reasoning.
-- **Neutral:** school prestige, a missing formal internship, use of public material, open-source tooling, or AI assistance by itself.
+- **Supporting:** a complete course, competition, research, public-data, personal, or work project chain that identifies the problem, data object or labels, method, output, checking approach, and business use. Non-production context does not reduce it; the automation baseline still distinguishes routine execution from candidate-owned judgment.
+- **Low:** tool names, exposure to platform metrics, changing content based on observed numbers, ordinary questionnaires or user portraits without a data-processing chain, generic descriptive statistics, advanced model names without personal reasoning, and target-sounding majors, departments, project names, or job titles unsupported by actual duties.
+- **Neutral:** school prestige, a missing formal internship or production workflow, use of public material, open-source tooling, or AI assistance by itself.
 
 The high priority on statistical foundation is specific to this profile. A marketing, business-development, or other less technical profile must define its own foundation and priority tiers rather than inherit this gate.
 
 ## Data-Analysis Foundation Gate
 
-Run independently from fast-start.
+Run independently from the generic foundation-and-transfer gate.
 
-- **Pass:** sustained quantitative training shown by a relevant curriculum or explicit core courses in mathematics, statistics, computer science, econometrics, operations research, or a comparable systematic track; or repeated, real, attributable analytical work with definitions, method choices, validation, correction, and a decision or usable result beyond commodity execution.
-- **Fail:** the available undergraduate and graduate paths lack clear quantitative training, while the remaining evidence is only public/tutorial/template/AI-assisted workflow execution and no candidate-owned analytical judgment is shown.
-- **Uncertain:** course or work detail is missing and could materially distinguish the two cases.
+- **Pass:** sustained quantitative training shown by rigorous curriculum, assessed work, or explicit core courses in mathematics, statistics, computer science, econometrics, operations research, or a comparable systematic track; or concrete, attributable analytical work with a defined problem, data structure and preparation, method choices, validation or error control, and a decision or usable result.
+- **Fail:** the complete resume provides weak or unsubstantiated quantitative training evidence, while every role-relevant project is empty evidence containing only tools, model names, broad goals, or generic completion, validation, or optimization claims. Public, course, competition, research, personal, and AI-assisted contexts do not cause the failure; missing a concrete candidate-owned analysis chain does.
+- **Uncertain:** source coverage is incomplete and a specific missing course, assessed output, or project detail could materially distinguish pass from fail. Do not use `uncertain` merely to promote an unsupported degree label.
 
-School level, degree title, professional labels, and SQL/Python keywords cannot compensate for a missing foundation. A non-quantitative background can overturn the concern through sustained, real, attributable analysis with rigorous reasoning and outcomes.
+School level, country, degree title, professional labels, and SQL/Python keywords cannot compensate for a missing foundation. Evaluate program selection, quantitative course rigor, duration, training density, assessed work, and attributable outputs when available; mark missing detail unknown rather than automatically treating an overseas or target-sounding degree as strong. A non-quantitative or weakly evidenced training path can overturn the concern through rigorous, attributable analysis with validation and outcomes.
 
-## Small-Company Intern Fast Start
+## Small-Company Intern Foundation And Transfer Speed
 
-When the generic small-company intern branch is activated, treat the opening as immediate capacity. A pass requires attributable evidence that can transfer with little onboarding across the role's recurring stages: obtaining inputs, cleaning or transforming them, defining metrics or decision logic, producing a usable output, and checking quality, anomalies, or feedback.
+When the generic small-company intern branch is activated, treat the opening as immediate capacity. A pass does not require prior production work. Systematic quantitative training, usable SQL/Python or equivalent tool basics, and a concrete attributable course, competition, research, public-data, personal, or work project can establish sufficient foundation and transfer speed when the candidate understands the problem, handles inputs, makes analysis choices, produces a usable result, and checks it.
 
-Marketing, operations, content, or platform exposure does not pass merely because the candidate viewed metrics, adjusted content, ran a questionnaire, built a user portrait, or listed SQL/Python. It can pass when the candidate repeatedly owned extraction, preparation, definitions, recurring delivery, monitoring, diagnosis, or quality checks.
+Judge every internship by its actual duties. A business, document, operations, or adjacent role may positively demonstrate text cleanup, classification, labeling, records discipline, coordination, or other stated work, but a target-sounding department or title cannot turn those duties into SQL extraction, structured-data preparation, metric definitions, reports, monitoring, quality checks, or anomaly diagnosis. This prevents false credit only; it does not penalize the candidate or weaken independent education and project evidence.
 
-Public or AI-assisted practice can pass fast start when execution is concrete, but it remains low-depth evidence unless candidate-owned reasoning and validation are shown. Do not require a formal internship when coursework or personal work proves the workflow.
+Prior recurring SQL, reporting, monitoring, data-quality, or diagnosis work adds confidence in transfer speed. Its absence is neutral. Public or AI-assisted practice can pass when execution is concrete; raise its evidence depth only when candidate-owned reasoning and validation are shown. Do not require a formal internship when education, coursework, competitions, research, or personal work proves the foundation and project chain.
 
 ## Expectation And Retention Lens
 
@@ -81,7 +81,7 @@ Raise expectation-gap risk only when several facts coexist: the candidate explic
 
 ## Verification Lens
 
-Do not use one fixed project walkthrough for every candidate. At screening time, prioritize the unresolved fact that could change the data-analysis foundation gate, small-company fast-start gate, or ordering within the passing pool.
+Do not use one fixed project walkthrough for every candidate. At screening time, prioritize the unresolved fact that could change the data-analysis foundation gate, small-company intern foundation-and-transfer gate, or ordering within the passing pool.
 
 When the strongest evidence is a public, prepared, template-friendly, or AI-assistable project, anchor the question in that project and test its weakest decisive link: a candidate-owned definition or method choice, a real cleaning or quality failure, validation against leakage or a misleading result, or adaptation when one input or business condition changed. Select only one link. When ownership, trajectory, or retention is more decision-relevant, let the corresponding generic module supply the target instead. Accept sanitized or abstracted evidence when underlying data is confidential.
 

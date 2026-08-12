@@ -4,27 +4,9 @@ Apply confirmed low-cost recruiter gates before full resume investigation. The p
 
 ## Select The Gate Profile
 
-Record the target role, intern or new-graduate audience, company context, hiring motive, and the target role's recurring workflow before applying audience-specific gates. Activate a gate only when its audience and company conditions are confirmed by the recruiter or JD. This version defines a fast-start gate only for small-company interns; do not invent medium-company, large-company, or experienced-hire behavior.
+Record the target role, intern or new-graduate audience, company context, and hiring motive before applying audience-specific gates. Activate a gate only when its conditions are confirmed by the recruiter or JD.
 
-## Work-Framework Transfer
-
-The fast-start gate measures whether the candidate already has a transferable way of working, not whether they have seen a familiar output or named a tool. Decompose the target role's recurring workflow from the JD or recruiter context into its relevant stages: acquiring inputs, preparing or transforming them, applying role-specific judgment or decision logic, producing a usable recurring output, and checking quality, exceptions, or feedback. Adapt the stages and evidence forms to the role; do not require stages the role does not use.
-
-## Small-Company Intern Fast-Start Gate
-
-For a confirmed small-company internship, assume the opening exists to add near-term working capacity unless the recruiter identifies a formal training program. Require evidence that the candidate can take a bounded daily task with little onboarding. If the company or audience is not confirmed, mark this gate `not applicable` rather than assuming this branch.
-
-Mark this gate:
-
-- `pass` when concrete, attributable work maps directly to the target workflow and covers core input handling or task execution plus a usable output or quality check. One end-to-end example may be enough for a directly aligned background; an adjacent background requires repeated evidence across entries or time that the target workflow has actually been performed;
-- `fail` when the complete resume shows only adjacent exposure, courses, skill keywords, theoretical potential, or advanced methods without directly transferable routine execution;
-- `uncertain` when the resume source or expected daily work is too incomplete to distinguish those cases.
-
-Use the selected role profile to translate these generic stages into domain-specific evidence and to define how much adjacent experience can transfer. Without a matching profile, derive only a provisional mapping from the JD and recruiter context; do not turn a major, degree title, industry label, or tool keyword into a standalone pass or failure.
-
-A public practice project or AI-assisted commodity workflow can pass this gate when the candidate's execution is concrete. It proves process readiness, not high capability depth. Keep that result separate from any applicable role-foundation gate: passing fast-start never implies passing a specialized foundation requirement.
-
-Treat this as a time-to-productivity gate, not a judgment about intelligence or long-term potential. Do not count the same gate result again as capability depth in later modules.
+Do not judge foundation, transfer speed, project quality, or actual duties here. Those require the investigation fact map and belong to `02-capability.md`. Running them as low-cost gates would let majors, departments, project names, or job titles substitute for evidence.
 
 ## Optional Recruiter-Confirmed Undergraduate Education Gate
 

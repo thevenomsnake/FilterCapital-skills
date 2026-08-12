@@ -44,6 +44,7 @@ Use the uncertainty type to choose the probe:
 - **Commodity, template-friendly, public, or AI-assistable work:** test one candidate-owned decision, an error or conflicting result they had to detect, or how they adapted when one material condition changed. Do not use `Did you use AI?` as a proxy for ability.
 - **Ownership or credibility:** distinguish the starting material from the candidate's personal change and its validation with the smallest relevant before/after or artifact evidence.
 - **Trajectory or fit:** test the specific choice or commitment fact that separates the live competing stories; do not invite a generic career narrative.
+- **Post-work re-entry continuity stop:** ask only for dated, verifiable actual work or comparable sustained role-related output inside the identified interval; explanations of motive without activity evidence do not overturn the stop.
 - **Missing gate fact:** ask directly for the exact classification or dated evidence needed to resolve it.
 
 Prefer a concrete counterfactual or reconstruction when it exposes understanding, but require only details relevant to the selected uncertainty. Accept sanitized descriptions when work material is confidential. Fluency, confidence, jargon, and polished storytelling are not evidence by themselves.

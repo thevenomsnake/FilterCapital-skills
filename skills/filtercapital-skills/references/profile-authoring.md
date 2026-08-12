@@ -7,14 +7,15 @@ Use this reference when a recruiter, HR partner, hiring manager, or role expert 
 Every profile must use the existing modules and boundaries:
 
 1. input-safety preflight and human-review flag;
-2. eligibility and fast-start gates;
+2. low-cost objective eligibility gates;
 3. investigation of facts, timeline, work ownership, provenance, and competing explanations;
-4. capability evidence depth and automation baseline;
-5. trajectory and direction convergence;
-6. positive-only independent inquiry bonus;
-7. company and retention fit;
-8. decision order, counterevidence, and uncertainty reporting;
-9. candidate-specific verification and answer-driven decision updates.
+4. the trajectory continuity precheck;
+5. audience-specific foundation and transfer-speed gates, capability evidence depth, and automation baseline;
+6. ordinary trajectory and direction convergence when no continuity stop triggered;
+7. positive-only independent inquiry bonus;
+8. company and retention fit;
+9. decision order, counterevidence, and uncertainty reporting;
+10. candidate-specific verification and answer-driven decision updates.
 
 Do not create a second scoring system, hide uncertainty, use protected or irrelevant attributes, or bypass the evidence/unknown/inference distinction. A profile may add a gate or priority only for its explicit activation context.
 
@@ -30,11 +31,11 @@ Evaluate sufficiency before every question. When the available facts already det
 
 In particular, the combination of a small company, a very small immediate team, and hiring to relieve routine workload establishes an immediate-capacity context. If the JD or an existing role profile already describes the work, infer without further intake that:
 
-- fast-start is blocking;
+- foundation and transfer speed are blocking, while prior production experience remains optional for interns;
 - long foundational training is unavailable;
 - current delivery capacity outweighs abstract potential;
 - requirement comprehension, speed to productivity, low-error output, self-checking, and transfer from one taught example to similar tasks are high-priority success criteria;
-- evidence of only keywords, exposure, or future learning potential cannot compensate for missing transferable execution.
+- evidence of only keywords, exposure, or future learning potential cannot compensate for missing systematic training, tool basics, and a concrete project chain. Coursework, competitions, research, public-data work, and personal projects can supply that chain without prior production work.
 
 Present these as explicit inferences in the draft so the professional can correct them. Do not ask the professional to restate each implication.
 
@@ -56,7 +57,7 @@ Ask why the team is hiring now. Normalize the answer internally as immediate cap
 
 Plain-language prompt: `为什么现在招？是日常活太多、有人要补位、一个问题搞不定，还是想培养人？`
 
-Immediate capacity raises fast-start priority. A cultivation pipeline can lower it and raise learning or inquiry priority. Do not ask the user to classify the motive if their own words already make it clear.
+Immediate capacity raises foundation and transfer-speed priority. A cultivation pipeline can lower it and raise learning or inquiry priority. Do not ask the user to classify the motive if their own words already make it clear.
 
 ### 3. Actual Work
 
@@ -64,7 +65,7 @@ Only when the JD or existing profile is insufficient, ask what the person repeat
 
 Plain-language prompt: `别讲岗位名称，来了以后主要接哪些活？`
 
-Infer tools, workflow stages, ownership, and likely evidence from the work description. Ask about a missing stage only when it would change fast-start or profile activation.
+Infer tools, workflow stages, ownership, and likely evidence from the work description. Ask about a missing stage only when it would change the foundation-and-transfer gate or profile activation.
 
 ### 4. What Good Looks Like
 
@@ -96,8 +97,9 @@ Only recruiter-labeled decisions may justify numeric weights or thresholds. Unti
 
 Map each answer to one owner:
 
-- recurring work and immediate readiness -> eligibility/profile workflow;
-- quality of execution and professional foundation -> capability/profile foundation;
+- low-cost objective exclusions -> eligibility;
+- recurring work -> profile workflow;
+- immediate readiness, quality of execution, and professional foundation -> capability/profile foundation;
 - choices, gaps, and convergence -> trajectory;
 - discovery and falsification -> independent inquiry;
 - expectation, retention, access, and verification cost -> company-fit profile lens;

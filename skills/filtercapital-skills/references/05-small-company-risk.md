@@ -41,23 +41,13 @@ Treat this as a satisfaction and retention forecast, not a penalty for ambition 
 
 ## Boundary With Trajectory
 
-The trajectory module owns the path penalty for an unexplained education re-entry gap. Do not subtract that same gap again here. Add a small-company fit risk only when independent evidence shows a separate availability, commitment, expectation, or retention problem.
+The trajectory module owns both the path penalty for an unexplained education re-entry gap and the post-work re-entry continuity stop. Do not subtract either fact again here. Do not run this module after that stop is triggered. Add a small-company fit risk only when independent evidence shows a separate availability, commitment, expectation, or retention problem.
 
-## Fast-Start Requirement
+## Boundary With Capability
 
-Apply the audience-specific standard:
+The capability module owns foundation, transfer speed, project evidence, and audience-specific execution standards. This module evaluates only independent company-choice, expectation, credibility, and retention evidence. Do not lower fit because an intern lacks production workflow experience or because the strongest capability evidence comes from coursework, competitions, research, public data, or personal projects. Prior daily-work similarity may increase confidence but creates no missing-experience penalty.
 
-- **Intern:** Let the eligibility module own fast-start pass or fail. After a pass, evaluate how closely the demonstrated workflow matches the daily work and how much verification or onboarding remains. Commodity execution is positive evidence of immediate usefulness; do not require an advanced result loop.
-- **New graduate:** Require at least one attributable loop covering a concrete problem, core inputs or constraints, personal decisions, quality or validation, and delivery or operational use.
-
-Do not treat the following as fast-start proof by themselves:
-
-- repeated `participated` or `assisted` wording without a personal deliverable;
-- a long technology stack or institution name;
-- a course, training, or production-style work sample whose origin and input access are unclear;
-- polished impact claims without method, ownership, or an inspectable artifact.
-
-When both retention and time-to-productivity require expensive verification, count that verification burden against small-company fit.
+Count verification burden here only when it concerns this module's own credibility, commitment, expectation, or retention risks. Do not repackage missing capability evidence or absent production experience as small-company fit risk.
 
 ## Two-Branch Risk
 

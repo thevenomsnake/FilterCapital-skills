@@ -47,10 +47,10 @@ Available profiles:
 
 Then read each referenced file and the selected profile completely before applying them. Carry their outputs into the next module.
 
-0. [Apply eligibility gates](references/00-eligibility.md): run confirmed low-cost hard gates first. Stop immediately on a confirmed failure.
+0. [Apply eligibility gates](references/00-eligibility.md): run only confirmed low-cost objective gates. Stop immediately on a confirmed irreversible failure.
 1. [Investigate facts](references/01-investigate.md): reconstruct the timeline, mine public context, test anomalies, and produce competing stories with sourced counterevidence. Do not score or recommend.
-2. [Score capability](references/02-capability.md): evaluate evidence depth, audience expectations, applicable role foundations, and role capability on `0-5`.
-3. [Score trajectory](references/03-trajectory.md): evaluate direction convergence and transition credibility on `0-5`.
+2. [Score trajectory](references/03-trajectory.md): evaluate direction convergence and transition credibility on `0-5`. When its immediate-capacity continuity stop is triggered, skip capability, inquiry, and fit and proceed directly to the decision.
+3. [Score capability](references/02-capability.md): from reconstructed duties and project chains, evaluate the small-company intern foundation-and-transfer gate, evidence depth, applicable role foundations, and role capability on `0-5`.
 4. [Add independent inquiry](references/04-independent-inquiry.md): award a positive-only `0-2` bonus.
 5. [Score small-company fit](references/05-small-company-risk.md): when the company context is confirmed small, evaluate credibility, access, authority-impact fit, and retention risk on `0-5`.
 6. [Make the decision](references/06-decision.md): combine the score vector, gates, branch outcomes, and uncertainty before designing any interview question.
