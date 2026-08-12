@@ -1,6 +1,6 @@
 ---
 profile: game-data-analysis
-version: 3
+version: 4
 origin: approved-standard-intake
 ---
 
@@ -49,17 +49,17 @@ Adapt this sequence to the actual JD. Do not require monetization, retention, ex
 
 Do not calculate a weighted total. Use these priority tiers to order evidence and decide which missing proof matters most:
 
-- **Blocking when activated:** the data-analysis foundation gate for this specialized profile; the small-company intern foundation-and-transfer gate when that audience and company context are confirmed. If the JD does not require statistical reasoning, select or create a different profile instead of weakening this one silently.
-- **High:** repeated, attributable work across the role's workflow; explicit metric or label definitions; method selection; validation, correction, and a decision or operational result.
+- **Blocking when activated:** the generic minimum sufficient positive evidence gate; the data-analysis foundation gate for this specialized profile. If the JD does not require statistical reasoning, select or create a different profile instead of weakening this one silently.
+- **High:** at least one attributable analysis chain containing a concrete question, data object or structure, preparation, metric or label definition, method rationale and a material choice, validation or error correction, and a specific finding, artifact, or decision use.
 - **Supporting:** a complete course, competition, research, public-data, personal, or work project chain that identifies the problem, data object or labels, method, output, checking approach, and business use. Non-production context does not reduce it; the automation baseline still distinguishes routine execution from candidate-owned judgment.
-- **Low:** tool names, exposure to platform metrics, changing content based on observed numbers, ordinary questionnaires or user portraits without a data-processing chain, generic descriptive statistics, advanced model names without personal reasoning, and target-sounding majors, departments, project names, or job titles unsupported by actual duties.
+- **Low:** tool names, exposure to platform metrics, changing content based on observed numbers, ordinary questionnaires, qualitative user research, user portraits, or game interest without a quantitative analysis chain, generic descriptive statistics, advanced model names without personal reasoning, and target-sounding majors, departments, project names, or job titles unsupported by actual duties. Credit the adjacent experience it actually proves, but do not let it cross the data-analysis line.
 - **Neutral:** school prestige, a missing formal internship or production workflow, use of public material, open-source tooling, or AI assistance by itself.
 
 The high priority on statistical foundation is specific to this profile. A marketing, business-development, or other less technical profile must define its own foundation and priority tiers rather than inherit this gate.
 
 ## Data-Analysis Foundation Gate
 
-Run independently from the generic foundation-and-transfer gate.
+Run independently from the generic minimum sufficient positive evidence gate.
 
 - **Pass:** sustained quantitative training shown by rigorous curriculum, assessed work, or explicit core courses in mathematics, statistics, computer science, econometrics, operations research, or a comparable systematic track; or concrete, attributable analytical work with a defined problem, data structure and preparation, method choices, validation or error control, and a decision or usable result.
 - **Fail:** the complete resume provides weak or unsubstantiated quantitative training evidence, while every role-relevant project is empty evidence containing only tools, model names, broad goals, or generic completion, validation, or optimization claims. Public, course, competition, research, personal, and AI-assisted contexts do not cause the failure; missing a concrete candidate-owned analysis chain does.
@@ -69,11 +69,13 @@ School level, country, degree title, professional labels, and SQL/Python keyword
 
 ## Small-Company Intern Foundation And Transfer Speed
 
-When the generic small-company intern branch is activated, treat the opening as immediate capacity. A pass does not require prior production work. Systematic quantitative training, usable SQL/Python or equivalent tool basics, and a concrete attributable course, competition, research, public-data, personal, or work project can establish sufficient foundation and transfer speed when the candidate understands the problem, handles inputs, makes analysis choices, produces a usable result, and checks it.
+When the generic minimum sufficient positive evidence gate is applied to this profile, require its one high-discrimination chain to demonstrate data-analysis foundation and transfer speed. It does not require prior production work. Systematic quantitative training and usable SQL/Python or equivalent tool basics support the chain but cannot replace candidate-owned problem understanding, data handling, analysis choices, validation or correction, and a specific result.
 
 Judge every internship by its actual duties. A business, document, operations, or adjacent role may positively demonstrate text cleanup, classification, labeling, records discipline, coordination, or other stated work, but a target-sounding department or title cannot turn those duties into SQL extraction, structured-data preparation, metric definitions, reports, monitoring, quality checks, or anomaly diagnosis. This prevents false credit only; it does not penalize the candidate or weaken independent education and project evidence.
 
 Prior recurring SQL, reporting, monitoring, data-quality, or diagnosis work adds confidence in transfer speed. Its absence is neutral. Public or AI-assisted practice can pass when execution is concrete; raise its evidence depth only when candidate-owned reasoning and validation are shown. Do not require a formal internship when education, coursework, competitions, research, or personal work proves the foundation and project chain.
+
+Standard competitions, course exercises, public datasets, and familiar model pipelines remain low-discrimination when they only reproduce a supplied target, stack models, report generic validation or optimization, or end in broad business advice. Several such entries do not accumulate into a pass. A strong mathematics, statistics, institution, or award signal also remains below the interview line when the only applied evidence is one standard pipeline with no candidate-owned definitions, tradeoffs, correction, or concrete finding.
 
 ## Expectation And Retention Lens
 

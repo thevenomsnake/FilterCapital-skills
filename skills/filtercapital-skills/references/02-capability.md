@@ -2,18 +2,25 @@
 
 Score job capability only after reading the investigation output.
 
-## Small-Company Intern Foundation And Transfer Gate
+## Minimum Sufficient Positive Evidence Gate
 
-Run this gate only after the investigation case sheets exist. Activate it for a confirmed small-company internship hired for near-term capacity rather than structured cultivation. It estimates whether the candidate can understand a bounded task, learn the local form quickly, and deliver it with limited guidance. It does not require prior employment or production experience.
+Run this absolute interview-line gate for every candidate after the investigation case sheets exist. Judge the candidate independently of the current batch. The gate asks whether at least one high-discrimination, attributable positive evidence chain shows that training or practice has become usable role capability.
 
 Return:
 
-- `pass` when the combined evidence shows role-appropriate systematic training or a credible learning path, necessary tool basics, and at least one concrete, attributable project or work chain with problem understanding, execution choices, a usable result, and some correctness check;
-- `fail` when the complete fact map shows neither sufficient foundation nor a concrete transferable chain, leaving only labels, skill keywords, adjacent exposure, generic claims, or methods with no demonstrated understanding or result;
-- `uncertain` when source coverage, actual duties, or expected work is too incomplete to distinguish those cases;
-- `not applicable` when the audience, company, or hiring motive does not activate this branch.
+- `pass` only when one anchored course, competition, research, public-data, personal, volunteer, or work entry identifies the actual problem, inputs or data structure, candidate ownership, method rationale and a material choice, validation, error control or correction, and a concrete finding, artifact, result, or consequence. The chain must be specific enough to distinguish candidate judgment from a supplied template or tool;
+- `fail` when the resume is materially complete but every role-relevant entry remains low-discrimination, generic, unattributed, or unverifiable, even if there are many entries, related degrees, courses, awards, tools, or advanced methods;
+- `uncertain` when source coverage is incomplete or one specific missing fact could realistically turn an anchored entry into the required chain. Do not use `uncertain` merely because a weak entry could hypothetically be explained better in interview.
 
-Coursework, competitions, research, public-data projects, and personal projects may supply the primary evidence. Prior production work across the target workflow increases confidence when present; its absence is neutral. Use the selected profile to map foundations and project chains to the target role. Without a profile, derive only a provisional mapping from the JD and recruiter context. Keep this gate separate from the capability score and any specialized foundation gate.
+Low-discrimination evidence is non-additive: several template pipelines, course keywords, generic projects, awards, or self-reported tools do not combine into one high-discrimination chain. Public, prepared, course, competition, and AI-assisted sources are neutral; their evidence can pass when ownership, reasoning, validation, and results are concrete. Prior production work increases confidence when present, but its absence is neutral and cannot cause failure.
+
+Education, courses, institutional selectivity, and awards establish training opportunity or an external selection signal, not formed capability. Normally read them together with conversion evidence from assessed work, projects, research, competitions, or work. Exception boundaries are strict:
+
+- exceptionally rigorous education can satisfy the gate only through candidate-owned assessed work, thesis, research, or another output that itself contains the required high-discrimination chain; reputation and curriculum labels alone cannot;
+- exceptionally strong applied work can satisfy the gate despite weak or unknown formal education when its ownership, reasoning, validation, and consequence are concrete enough to demonstrate the missing foundation in use;
+- a prestigious institution, hard major, award, leaderboard position, or advanced model name without the underlying attributable chain never qualifies as an exception.
+
+For a small-company intern hired for near-term capacity, this gate is also the foundation-and-transfer line: the evidence must support learning and reliable bounded delivery with limited guidance, but it still does not require prior employment or production experience. Use the selected profile to map the chain to the role. Without a profile, derive only a provisional mapping from the JD and recruiter context. Keep this gate separate from the capability score and any specialized foundation gate.
 
 ## Automation Baseline
 
@@ -30,7 +37,7 @@ Treat AI use itself as neutral. This baseline measures how discriminating the ev
 
 Do not infer weaker thinking from age, graduation cohort, or long-term access to AI. Apply the same automation baseline to every candidate and judge only attributable framing, decisions, verification, correction, and transfer to changed conditions.
 
-Cap a work sample at Level 2 when public or prepared inputs and routine deliverables make it reproducible from a short prompt or template, unless the resume shows candidate-owned judgment, a material real-world constraint, or feedback that changed the work. Count a long tool list, many workflow stages, and repeated routine checks once rather than as independent evidence. A simple work sample may still be strong when its reasoning and validation are deep.
+Do not cap a work sample because its inputs are public or prepared. Cap it at Level 2 when it remains a reproducible standard pipeline and the resume does not show candidate-owned judgment, a material constraint, meaningful validation or correction, or a result that changed the work. Count a long tool list, many workflow stages, repeated routine checks, and several near-identical projects once rather than as independent evidence. A simple work sample may still be strong when its reasoning and validation are deep.
 
 ### Artifact Provenance And Ownership
 
@@ -51,7 +58,7 @@ Execution coverage is not evidence depth. A public or template-based work sample
 
 Treat institution, country, degree, and major names as labels, not training quality. Evaluate the strongest verifiable combination of entry prerequisites or selection, curriculum and course rigor, program duration, training density, assessed work, and attributable outputs. Do not automatically raise the signal for an overseas degree or a target-sounding program name. When these details are missing, mark training quality `unknown` rather than inventing a precise tier or assuming strength.
 
-School or program reputation may provide context only when supported by relevant, current evidence about the actual program. It cannot replace coursework and candidate work. A selective or technically demanding program still cannot compensate for empty project evidence, while a less selective or shorter program can be supplemented by rigorous, attributable projects and outputs.
+School or program reputation may provide context only when supported by relevant, current evidence about the actual program. It cannot replace candidate-owned conversion evidence. A selective or technically demanding program still cannot compensate for empty project evidence; a less selective or shorter program can be supplemented by an exceptionally rigorous, attributable applied chain.
 
 Treat a project as `empty evidence` when it contains only tools, model names, broad goals, or claims such as completed, validated, or optimized, without enough detail to identify the problem, inputs or data structure, candidate action, material choices, checking or validation method, error control, and a concrete result or consequence. Advanced terminology does not increase evidence depth. When training quality is weak or unsubstantiated and all role-relevant projects are empty evidence, return capability `0-1` and fail any activated gate that requires foundation plus a concrete project chain. Production experience remains irrelevant to this failure.
 
@@ -65,7 +72,7 @@ For interns, missing production SQL, recurring reports, monitoring, quality oper
 
 ### Intern
 
-For a small-company intern hired as near-term capacity, apply the foundation-and-transfer gate first. After it passes, rank by role-relevant foundation, candidate-owned judgment, learning capacity, and concrete execution. Accept coursework, personal projects, competitions, clubs, research, volunteering, and internships. Do not require formal work or production impact.
+For a small-company intern hired as near-term capacity, apply the minimum sufficient positive evidence gate first. After it passes, rank by role-relevant foundation, candidate-owned judgment, learning capacity, and concrete execution. Accept coursework, personal projects, competitions, clubs, research, volunteering, and internships. Do not require formal work or production impact.
 
 ### New Graduate
 
@@ -73,13 +80,13 @@ Require at least one concrete practice or delivery. Without real-context or end-
 
 ### Ranking Signals Within The Passing Pool
 
-For every target role, load its matching profile when available and use that profile's foundation and qualitative priorities. Without a profile, derive only a provisional foundation from the JD and recruiter context. Then rank candidates who clear the applicable gates by that role-relevant foundation and the completeness of their own problem chain. Concrete work that identifies inputs or constraints, method choice, output, and user, decision, or operational use should outrank adjacent exposure, generic tool lists, and vague work-sample titles. A missing formal internship is not a reason to mechanically downgrade this combination; coursework, personal projects, competitions, research, volunteering, or other settings can be sufficient when the work is specific and attributable.
+Apply ranking signals only after the absolute gate passes. For every target role, load its matching profile when available and use that profile's foundation and qualitative priorities. Without a profile, derive only a provisional foundation from the JD and recruiter context. Rank passing candidates by role-relevant foundation and the strength of their attributable chain. Never use relative strength within a weak batch to convert a failed or uncertain gate into a recommendation. A missing formal internship is not a reason to mechanically downgrade; coursework, personal projects, competitions, research, volunteering, or other settings can be sufficient when the work is specific and attributable.
 
 Specificity improves evidence discrimination but does not erase the automation baseline: externally supplied or easily reproducible work still needs candidate-owned definitions, judgment, validation, correction, and a consequential result before it supports higher capability depth.
 
 ## Role Profile Overlay
 
-When the selected profile defines a specialized foundation gate, run it independently from the generic foundation-and-transfer gate and return `pass`, `fail`, or `uncertain` using only that profile's evidence rules. Passing one gate does not prove the other.
+When the selected profile defines a specialized foundation gate, run it independently from the minimum sufficient positive evidence gate and return `pass`, `fail`, or `uncertain` using only that profile's evidence rules. Passing one gate does not prove the other.
 
 When no profile matches and the recruiter has not explicitly confirmed a foundation gate, return `not applicable`. Do not invent a hard gate or import another profile's professional standards.
 
@@ -92,4 +99,6 @@ When no profile matches and the recruiter has not explicitly confirmed a foundat
 - `4`: One credible result loop linking a nontrivial problem, candidate-owned judgment, appropriate validation, and an outcome tested against evidence, users, or operational feedback.
 - `5`: Multiple independent result loops plus evidence of sound method selection, validation, and revision under real constraints.
 
-Return: `score 0-5`, `small-company intern foundation-and-transfer gate`, `applicable specialized foundation gate or not applicable`, education and training evidence, automation baseline, candidate-owned judgment, strongest evidence, missing evidence, the capability uncertainty most worth verifying, and confidence. Keep both gates separate from the capability score and from each other. Supply a verification target to the decision module; do not treat it as an additional final interview question.
+Capability `2` describes useful low-discrimination execution but never crosses the absolute interview line by itself.
+
+Return: `score 0-5`, `minimum sufficient positive evidence gate`, `applicable specialized foundation gate or not applicable`, education and training evidence, automation baseline, candidate-owned judgment, strongest evidence, missing evidence, the capability uncertainty most worth verifying, and confidence. Keep both gates separate from the capability score and from each other. Supply a verification target to the decision module; do not treat it as an additional final interview question.

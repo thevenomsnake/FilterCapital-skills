@@ -50,7 +50,7 @@ Then read each referenced file and the selected profile completely before applyi
 0. [Apply eligibility gates](references/00-eligibility.md): run only confirmed low-cost objective gates. Stop immediately on a confirmed irreversible failure.
 1. [Investigate facts](references/01-investigate.md): reconstruct the timeline, mine public context, test anomalies, and produce competing stories with sourced counterevidence. Do not score or recommend.
 2. [Score trajectory](references/03-trajectory.md): evaluate direction convergence and transition credibility on `0-5`. When its immediate-capacity continuity stop is triggered, skip capability, inquiry, and fit and proceed directly to the decision.
-3. [Score capability](references/02-capability.md): from reconstructed duties and project chains, evaluate the small-company intern foundation-and-transfer gate, evidence depth, applicable role foundations, and role capability on `0-5`.
+3. [Score capability](references/02-capability.md): from reconstructed duties and project chains, apply the absolute minimum-sufficient-positive-evidence gate, then evaluate evidence depth, applicable role foundations, and role capability on `0-5`.
 4. [Add independent inquiry](references/04-independent-inquiry.md): award a positive-only `0-2` bonus.
 5. [Score small-company fit](references/05-small-company-risk.md): when the company context is confirmed small, evaluate credibility, access, authority-impact fit, and retention risk on `0-5`.
 6. [Make the decision](references/06-decision.md): combine the score vector, gates, branch outcomes, and uncertainty before designing any interview question.
@@ -65,6 +65,7 @@ Then read each referenced file and the selected profile completely before applyi
 - Keep profile-specific priorities qualitative unless recruiter-labeled examples have calibrated numeric weights. A profile may define a hard gate only for its activated role/context.
 - Do not collapse it into a weighted total until recruiter-labeled examples calibrate useful weights and thresholds.
 - Let confirmed hard gates and convergent risk branches override module scores only where the references explicitly say so.
+- Apply the absolute interview line independently before any batch comparison. Relative strength cannot convert a gate failure or unresolved insufficiency into advancement, and a batch may contain no recommended candidate.
 - Keep observations, inferences, and decisions visibly separate.
 
 ## Knowledge Maintenance

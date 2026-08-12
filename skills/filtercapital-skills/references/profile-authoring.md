@@ -9,13 +9,12 @@ Every profile must use the existing modules and boundaries:
 1. input-safety preflight and human-review flag;
 2. low-cost objective eligibility gates;
 3. investigation of facts, timeline, work ownership, provenance, and competing explanations;
-4. the trajectory continuity precheck;
-5. audience-specific foundation and transfer-speed gates, capability evidence depth, and automation baseline;
-6. ordinary trajectory and direction convergence when no continuity stop triggered;
-7. positive-only independent inquiry bonus;
-8. company and retention fit;
-9. decision order, counterevidence, and uncertainty reporting;
-10. candidate-specific verification and answer-driven decision updates.
+4. the trajectory continuity precheck, followed by ordinary trajectory and direction convergence when no stop triggered;
+5. the absolute minimum-sufficient-positive-evidence gate, audience-specific foundation standards, capability evidence depth, and automation baseline;
+6. positive-only independent inquiry bonus;
+7. company and retention fit;
+8. decision order, counterevidence, and uncertainty reporting;
+9. candidate-specific verification and answer-driven decision updates.
 
 Do not create a second scoring system, hide uncertainty, use protected or irrelevant attributes, or bypass the evidence/unknown/inference distinction. A profile may add a gate or priority only for its explicit activation context.
 
@@ -31,11 +30,11 @@ Evaluate sufficiency before every question. When the available facts already det
 
 In particular, the combination of a small company, a very small immediate team, and hiring to relieve routine workload establishes an immediate-capacity context. If the JD or an existing role profile already describes the work, infer without further intake that:
 
-- foundation and transfer speed are blocking, while prior production experience remains optional for interns;
+- at least one high-discrimination, attributable positive evidence chain is blocking, while prior production experience remains optional for interns;
 - long foundational training is unavailable;
 - current delivery capacity outweighs abstract potential;
 - requirement comprehension, speed to productivity, low-error output, self-checking, and transfer from one taught example to similar tasks are high-priority success criteria;
-- evidence of only keywords, exposure, or future learning potential cannot compensate for missing systematic training, tool basics, and a concrete project chain. Coursework, competitions, research, public-data work, and personal projects can supply that chain without prior production work.
+- evidence of only keywords, exposure, awards, template pipelines, or future learning potential cannot cross the line. Coursework, competitions, research, public-data work, and personal projects can supply the required chain without prior production work when candidate-owned reasoning and validation are concrete.
 
 Present these as explicit inferences in the draft so the professional can correct them. Do not ask the professional to restate each implication.
 
@@ -99,11 +98,11 @@ Map each answer to one owner:
 
 - low-cost objective exclusions -> eligibility;
 - recurring work -> profile workflow;
-- immediate readiness, quality of execution, and professional foundation -> capability/profile foundation;
+- absolute interview line, immediate readiness, quality of execution, and professional foundation -> capability/profile foundation;
 - choices, gaps, and convergence -> trajectory;
 - discovery and falsification -> independent inquiry;
 - expectation, retention, access, and verification cost -> company-fit profile lens;
-- thresholds and aggregation -> decision module/profile priority.
+- absolute-before-relative comparison, thresholds, and aggregation -> decision module/profile priority;
 - role-specific decisive unknowns and acceptable proof -> verification lens; do not prewrite one question for every candidate.
 
 Do not score the same fact in multiple modules. Keep the profile's qualitative priorities separate from the generic score vector.

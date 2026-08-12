@@ -64,6 +64,8 @@ Record:
 
 Attribute evidence from the actual inputs, actions, decisions, outputs, and checks. Treat majors, departments, employer units, project names, and job titles as labels only. Words associated with the target role do not establish that work, and a label mismatch does not erase transferable fragments that the described duties do prove.
 
+Treat STAR structure, polished prose, technical density, and a complete-looking sequence as presentation, not evidence. Resolve each case-sheet field independently from candidate-specific details. Generic goals, tool or model lists, and claims such as `completed`, `validated`, `optimized`, or `improved` leave the underlying field `unknown` unless the resume supplies the data or input object, personal action or choice, checking method, and concrete finding, artifact, or result. Do not let one generic sentence fill several fields.
+
 Describe execution status without scoring it:
 
 - `mentioned only`;
