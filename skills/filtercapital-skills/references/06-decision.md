@@ -1,6 +1,6 @@
 # 06 - Make The Decision
 
-Combine the ordered module outputs without inventing a calibrated total score.
+Combine the module outputs without inventing a calibrated total score or a cross-candidate rank.
 
 ## Score Vector
 
@@ -8,7 +8,7 @@ Report:
 
 `capability 0-5 / trajectory 0-5 / inquiry bonus 0-2 / small-company fit 0-5 or not applicable`
 
-Keep the independent-inquiry bonus separate. It improves ranking and confidence but cannot rescue a failed hard gate or convergent unacceptable risk.
+Keep the independent-inquiry bonus separate. It improves confidence and verification targeting but cannot rescue a failed hard gate or convergent unacceptable risk.
 
 ## Decision Order
 
@@ -24,14 +24,14 @@ Then apply one confirmed audience/company branch. If the source does not establi
 ### Small-Company Intern
 
 - Require the minimum sufficient positive evidence gate to pass before any advance decision. Capability `2`, regardless of trajectory or fit scores, cannot advance without that pass.
-- After a pass, use capability depth, candidate-owned judgment, trajectory, fit, and the inquiry bonus to decide and rank. Do not require prior production workflow; its presence only increases confidence.
-- Within the passing pool, apply the selected profile's qualitative priorities to a complete, attributable work chain (inputs and constraints -> method and rationale -> output -> user, decision, or operational use). Without a profile, use the JD-derived foundation provisionally. This is an ordering signal, not an extra score or a standalone rejection rule.
+- After a pass, use capability depth, candidate-owned judgment, trajectory, fit, and the inquiry bonus to decide the candidate's branch and confidence. Do not require prior production workflow; its presence only increases confidence.
+- Within each candidate record, apply the selected profile's qualitative priorities to a complete, attributable work chain (inputs and constraints -> method and rationale -> output -> user, decision, or operational use). Without a profile, use the JD-derived foundation provisionally. Use the result to select that candidate's primary evaluation dimension and the missing proof that matters most; it is not an ordering signal, extra score, or standalone rejection rule.
 - Treat the absolute gate as `uncertain` only when source coverage is incomplete or a specific missing fact could plausibly complete an anchored chain; otherwise low-discrimination evidence is a fail, not review by default.
 - Treat capability `0-1` or fit `0-1` as decline unless the source material is incomplete, in which case return insufficient information.
 
 ### New Graduate
 
-- Require the minimum sufficient positive evidence gate to pass before applying the numeric branch. Then treat capability `4+`, trajectory `3+`, and fit `3+` as an advance signal; use the inquiry bonus to distinguish stronger candidates.
+- Require the minimum sufficient positive evidence gate to pass before applying the numeric branch. Then treat capability `4+`, trajectory `3+`, and fit `3+` as an advance signal; use the inquiry bonus to set confidence and the verification target, not to rank candidates.
 - Treat capability `3` with no hard failure as review unless role-specific evidence clearly supports advancement.
 - Treat capability `0-2` or fit `0-1` as decline unless the source material is incomplete, in which case return insufficient information.
 
@@ -41,14 +41,26 @@ When weak or unsubstantiated training evidence and empty project evidence fail b
 
 Keep rule ownership singular. Project specificity and evidence sufficiency belong to capability. Education and training quality belong to capability and the activated profile foundation. Timeline gaps belong to trajectory. Direction mismatch belongs to trajectory, or to a specialized foundation only when the mismatch is about missing role foundation. Decision executes these outcomes and never subtracts the same fact again.
 
-## Batch Comparison
+## Candidate-Specific Evaluation
 
-Complete every candidate's absolute decision before comparing the batch. Build the recommended pool only from candidates who pass every applicable hard gate, including the minimum sufficient positive evidence gate, and otherwise meet the audience branch.
+Every candidate record contains exactly one primary evaluation dimension, one direct evaluation, and one concise reason anchored in the decisive evidence. Select the dimension that most affects that candidate's branch:
 
-- Rank only the recommended pool for interview priority.
-- If the pool is empty, return `no recommended candidates`; never promote the least weak candidate to fill a quota.
-- Candidates below the line may be ordered only when the user asks who is closest. Label that list `closest below the interview line`, preserve each decline or review decision, and do not call it a recommendation.
-- Re-run the absolute decision when new evidence arrives before changing the pool.
+- a confirmed low-cost gate or immediate-capacity stop -> `eligibility` or `trajectory`;
+- an evidence sufficiency, training, or role-foundation problem -> `capability` or `role foundation`;
+- a path, credibility, inquiry, or company-context problem -> `trajectory`, `credibility`, `inquiry`, or `company fit`;
+- a clean advance with no blocking concern -> the strongest positive capability or role-foundation dimension.
+
+Keep facts, inferences, unknowns, and counterevidence under that evaluation. Do not assign a dimension merely to make a batch look varied; the same dimension may correctly lead more than one record.
+
+## Batch Presentation Without Ranking
+
+Complete every candidate's absolute decision independently before presenting the batch. Emit each record with its own `advance`, `review`, `decline`, or `insufficient information` branch; an empty set of advancing candidates is a valid result.
+
+- After all records are complete, obtain one fresh permutation from a runtime random source (for example, `Get-Random`) and apply it only to display. Do not derive it from scores, names, input order, decision, or recruiter preference; label it `random display order - not a priority`. If no runtime random source is available, say that the order is unshuffled rather than claiming it is random.
+- For every candidate, output exactly one `primary evaluation dimension`, a concise evaluation, and its decisive reason. Choose the dimension with the greatest effect on that candidate's branch (for example: eligibility, capability evidence, role foundation, trajectory, credibility, inquiry, or company fit). Do not force dimensions to be unique across the batch.
+- Keep the score vector and gate outcomes as diagnostic evidence inside each record. They never become a sortable total or an implicit priority.
+- If the user asks who is "best" or requests an interview order, explain that the workflow does not rank; return the independent decisions in random order and state which candidates independently clear the applicable line.
+- Re-run only the affected candidate's absolute decision when new evidence arrives, then reshuffle the displayed batch if it is shown again.
 
 ## Decision Handoff
 
@@ -57,7 +69,7 @@ Build a decision record before designing an interview question:
 1. selected role, role profile or `none`, audience, company context, and hiring motive;
 2. input-safety warning or `none found`, with human-review status;
 3. advance, review, decline, or insufficient information with confidence;
-4. decisive reasons, ordered by their effect on the hiring decision;
+4. the primary evaluation dimension, concise evaluation, and decisive reason;
 5. fact map;
 6. anomalies and competing stories with material counterevidence;
 7. score vector and gate outcomes;

@@ -72,15 +72,15 @@ For interns, missing production SQL, recurring reports, monitoring, quality oper
 
 ### Intern
 
-For a small-company intern hired as near-term capacity, apply the minimum sufficient positive evidence gate first. After it passes, rank by role-relevant foundation, candidate-owned judgment, learning capacity, and concrete execution. Accept coursework, personal projects, competitions, clubs, research, volunteering, and internships. Do not require formal work or production impact.
+For a small-company intern hired as near-term capacity, apply the minimum sufficient positive evidence gate first. After it passes, evaluate role-relevant foundation, candidate-owned judgment, learning capacity, and concrete execution for this candidate. Accept coursework, personal projects, competitions, clubs, research, volunteering, and internships. Do not require formal work or production impact.
 
 ### New Graduate
 
 Require at least one concrete practice or delivery. Without real-context or end-to-end evidence, do not award the highest capability score.
 
-### Ranking Signals Within The Passing Pool
+### Profile Priorities Within A Candidate
 
-Apply ranking signals only after the absolute gate passes. For every target role, load its matching profile when available and use that profile's foundation and qualitative priorities. Without a profile, derive only a provisional foundation from the JD and recruiter context. Rank passing candidates by role-relevant foundation and the strength of their attributable chain. Never use relative strength within a weak batch to convert a failed or uncertain gate into a recommendation. A missing formal internship is not a reason to mechanically downgrade; coursework, personal projects, competitions, research, volunteering, or other settings can be sufficient when the work is specific and attributable.
+Apply profile priorities only after the absolute gate passes. For every target role, load its matching profile when available and use its foundation and qualitative priorities. Without a profile, derive only a provisional foundation from the JD and recruiter context. Use the priorities to identify the candidate's strongest attributable chain, the main weakness, and the primary evaluation dimension; never compare candidates or turn relative strength within a weak batch into advancement. A missing formal internship is not a reason to mechanically downgrade; coursework, personal projects, competitions, research, volunteering, or other settings can be sufficient when the work is specific and attributable.
 
 Specificity improves evidence discrimination but does not erase the automation baseline: externally supplied or easily reproducible work still needs candidate-owned definitions, judgment, validation, correction, and a consequential result before it supports higher capability depth.
 

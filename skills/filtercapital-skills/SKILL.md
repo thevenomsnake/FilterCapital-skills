@@ -1,6 +1,6 @@
 ---
 name: filtercapital-skills
-description: Investigate resumes across roles from user-supplied text, files, public URLs, or authenticated recruitment pages the user chooses. Reconstruct candidate stories, load an optional role-and-industry profile, apply recruiter-confirmed and role-appropriate gates, score ordered evidence modules, test competing explanations, and make small-company hiring decisions for interns and new graduates. Use when screening or comparing resumes in Codex, explaining outcomes, probing credibility or stability, or learning new judgment patterns from recruiter feedback.
+description: Investigate resumes across roles from user-supplied text, files, public URLs, or authenticated recruitment pages the user chooses. Reconstruct candidate stories, load an optional role-and-industry profile, apply recruiter-confirmed and role-appropriate gates, evaluate independent evidence modules, test competing explanations, and make small-company hiring decisions for interns and new graduates. Use when screening resumes in Codex, explaining outcomes, probing credibility or stability, or learning new judgment patterns from recruiter feedback.
 ---
 
 # FilterCapital-skills
@@ -15,6 +15,8 @@ Run the investigation in Codex. Treat the resume as an evidence trace, not a lis
 - Match certainty to evidence. Label facts, inferences, competing explanations, and unknowns; say `insufficient information` when the evidence cannot support a decision.
 - Include counterevidence only when it could materially change the decision. Do not manufacture balance around a conclusion already supported by convergent evidence.
 - Stay professional and job-relevant. Directness does not permit insults, protected attributes, irrelevant moral judgments, or claims beyond the evidence.
+- Decide every candidate independently. For a batch, present the completed records in a fresh random order that has no relationship to input order, scores, names, or decisions; the order is display-only and never a priority signal.
+- Give each candidate one `primary evaluation dimension`, one concise evaluation, and the fact-based reason that makes that dimension decisive. Choose the dimension by decision leverage, not by an arbitrary rotation; dimensions may repeat when the evidence genuinely points to the same issue.
 
 ## Acquire Evidence
 
@@ -65,7 +67,7 @@ Then read each referenced file and the selected profile completely before applyi
 - Keep profile-specific priorities qualitative unless recruiter-labeled examples have calibrated numeric weights. A profile may define a hard gate only for its activated role/context.
 - Do not collapse it into a weighted total until recruiter-labeled examples calibrate useful weights and thresholds.
 - Let confirmed hard gates and convergent risk branches override module scores only where the references explicitly say so.
-- Apply the absolute interview line independently before any batch comparison. Relative strength cannot convert a gate failure or unresolved insufficiency into advancement, and a batch may contain no recommended candidate.
+- Apply the absolute interview line independently before any batch presentation. Relative strength, batch composition, and display order cannot convert a gate failure or unresolved insufficiency into advancement; a batch may contain no advancing candidate.
 - Keep observations, inferences, and decisions visibly separate.
 
 ## Knowledge Maintenance

@@ -9,7 +9,7 @@ Collect the unresolved facts from the decision record and the selected profile's
 - **Resume anchor:** the specific claim, omission, transition, project, or result it concerns;
 - **Owner:** eligibility, investigation, capability, trajectory, inquiry, fit, or profile;
 - **Current interpretation:** what the resume presently supports, labeled as fact, inference, or unknown;
-- **Decision effect:** which gate, score, risk branch, confidence level, or candidate ordering could change;
+- **Decision effect:** which gate, score, risk branch, or confidence level for this candidate could change;
 - **Overturning evidence:** an observable answer or artifact that would weaken the current concern;
 - **Confirming evidence:** an answer pattern that would leave or strengthen the current interpretation;
 - **Answerability:** whether the candidate can reasonably answer without disclosing protected, private, or confidential material.
@@ -21,19 +21,19 @@ Discard leads that are already resolved, unrelated to the job, based on protecte
 Choose lexicographically; do not invent a numeric information-gain score:
 
 1. prefer a realistic answer that could reverse a gate or advance/review/decline branch;
-2. then prefer one that could expose an expensive false positive or materially reorder advancing candidates;
+2. then prefer one that could expose an expensive false positive or materially change this candidate's branch or confidence;
 3. then prefer the narrowest candidate-answerable fact with observable evidence;
 4. break remaining ties by lower interview and verification cost.
 
 Apply the decision branch:
 
-- `advance`: test the strongest claim whose ownership, reliability, or transferability could materially lower confidence or ranking;
+- `advance`: test the strongest claim whose ownership, reliability, or transferability could materially lower confidence or reverse the advance decision;
 - `review` or `insufficient information`: test the missing fact most likely to move the candidate to advance or decline;
 - `decline`: ask only when realistic counterevidence could overturn the decisive reason;
 - confirmed irreversible gate failure or convergent decline: return `none - no unresolved job-relevant fact would change the decision`;
 - unreliable source contamination: return `none - clean source required`.
 
-Apply this separately to every candidate before cross-candidate comparison. Never substitute one generic question for a batch.
+Apply this separately to every candidate. The batch is randomized only after all candidate records and questions are complete; never substitute one generic question for a batch.
 
 ## Construct One Question
 

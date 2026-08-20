@@ -31,7 +31,7 @@ This profile is the approved output of the generic standards-authoring intake. I
 | Daily work spans inputs, preparation, definitions, recurring output, and checks | Use these stages to identify transferable foundations and project evidence; prior production coverage is additive, not required. |
 | Adjacent exposure is easier to obtain than end-to-end ownership | Treat platform metrics, content changes, ordinary questionnaires, and tool keywords as low-discrimination unless the full workflow is attributable. |
 | Public practice can demonstrate foundation and transfer speed but not necessarily deep judgment | Let it support the generic gate while keeping the automation baseline and specialized foundation gate separate. |
-| No formal internship is required if personal work is concrete | Keep missing formal internship neutral and rank by attributable work and reasoning. |
+| No formal internship is required if personal work is concrete | Keep missing formal internship neutral; evaluate each candidate by attributable work and reasoning. |
 
 ## Role Shape
 
@@ -47,7 +47,7 @@ Adapt this sequence to the actual JD. Do not require monetization, retention, ex
 
 ## Qualitative Priority
 
-Do not calculate a weighted total. Use these priority tiers to order evidence and decide which missing proof matters most:
+Do not calculate a weighted total. Use these priority tiers to identify the most decision-relevant evidence and missing proof for each candidate:
 
 - **Blocking when activated:** the generic minimum sufficient positive evidence gate; the data-analysis foundation gate for this specialized profile. If the JD does not require statistical reasoning, select or create a different profile instead of weakening this one silently.
 - **High:** at least one attributable analysis chain containing a concrete question, data object or structure, preparation, metric or label definition, method rationale and a material choice, validation or error correction, and a specific finding, artifact, or decision use.
@@ -83,7 +83,7 @@ Raise expectation-gap risk only when several facts coexist: the candidate explic
 
 ## Verification Lens
 
-Do not use one fixed project walkthrough for every candidate. At screening time, prioritize the unresolved fact that could change the data-analysis foundation gate, small-company intern foundation-and-transfer gate, or ordering within the passing pool.
+Do not use one fixed project walkthrough for every candidate. At screening time, prioritize the unresolved fact that could change the data-analysis foundation gate, small-company intern foundation-and-transfer gate, or this candidate's decision confidence.
 
 When the strongest evidence is a public, prepared, template-friendly, or AI-assistable project, anchor the question in that project and test its weakest decisive link: a candidate-owned definition or method choice, a real cleaning or quality failure, validation against leakage or a misleading result, or adaptation when one input or business condition changed. Select only one link. When ownership, trajectory, or retention is more decision-relevant, let the corresponding generic module supply the target instead. Accept sanitized or abstracted evidence when underlying data is confidential.
 

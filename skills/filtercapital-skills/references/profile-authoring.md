@@ -102,7 +102,7 @@ Map each answer to one owner:
 - choices, gaps, and convergence -> trajectory;
 - discovery and falsification -> independent inquiry;
 - expectation, retention, access, and verification cost -> company-fit profile lens;
-- absolute-before-relative comparison, thresholds, and aggregation -> decision module/profile priority;
+- absolute decision before batch presentation, thresholds, and aggregation -> decision module/profile priority;
 - role-specific decisive unknowns and acceptable proof -> verification lens; do not prewrite one question for every candidate.
 
 Do not score the same fact in multiple modules. Keep the profile's qualitative priorities separate from the generic score vector.
